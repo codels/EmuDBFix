@@ -29,3 +29,9 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (30081, 0, 9, 0, 0, 2, 100, 0, 500, 500, 1000, 1000, 24, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'evade on phase2');
 (30081, 0, 10, 0, 7, 0, 100, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'reset faction on evade');
 (30081, 0, 11, 0, 7, 0, 100, 0, 0, 0, 0, 0, 22, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'set phase 1 on evade');
+
+DELETE FROM `creature_text` WHERE `entry` = 30081;
+INSERT INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `language`, `probability`, `emote`, `duration`, `sound`,
+`comment`) VALUES
+(30081, 0, 0, 'You dare to touch ME? You won\'t keep me from proving myself to the Lich King!', 0, 0, 0, 0, 0, 0, ''),
+(30081, 1, 0, 'Wait, wait... I surrender! Please, no more! I\'ll leave!', 0, 0, 0, 0, 0, 0, '');
