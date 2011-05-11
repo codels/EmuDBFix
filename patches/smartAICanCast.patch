@@ -1,12 +1,12 @@
 diff --git a/src/server/game/AI/SmartScripts/SmartScript.cpp b/src/server/game/AI/SmartScripts/SmartScript.cpp
-index 1369188..d5eff69 100644
+index 1369188..172b0f7 100644
 --- a/src/server/game/AI/SmartScripts/SmartScript.cpp
 +++ b/src/server/game/AI/SmartScripts/SmartScript.cpp
 @@ -465,16 +465,24 @@ void SmartScript::ProcessAction(SmartScriptHolder& e, Unit* unit, uint32 var0, u
              if (!targets)
                  return;
  
-+			bool canCast;
++            bool canCast;
 +
              for (ObjectList::const_iterator itr = targets->begin(); itr != targets->end(); ++itr)
              {
@@ -14,22 +14,21 @@ index 1369188..d5eff69 100644
                  {
 -                    if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
 -                        me->InterruptNonMeleeSpells(false);
--
++                    //Allowed to cast only if not casting (unless we interrupt ourself) or if spell is triggered
++                    canCast = !me->IsNonMeleeSpellCasted(false) || (e.action.cast.flags & (SMARTCAST_TRIGGERED | SMARTCAST_INTERRUPT_PREVIOUS));
++
++                    if (canCast)
++                    {
++                        if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
++                            me->InterruptNonMeleeSpells(false);
+ 
 -                    me->CastSpell((*itr)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
 -                    sLog->outDebug(LOG_FILTER_DATABASE_AI, "SmartScript::ProcessAction:: SMART_ACTION_CAST:: Creature %u casts spell %u on target %u with castflags %u",
 -                        me->GetGUIDLow(), e.action.cast.spell, (*itr)->GetGUIDLow(), e.action.cast.flags);
-+					//Allowed to cast only if not casting (unless we interrupt ourself) or if spell is triggered
-+					canCast = !me->IsNonMeleeSpellCasted(false) || (e.action.cast.flags & (SMARTCAST_TRIGGERED | SMARTCAST_INTERRUPT_PREVIOUS));
-+
-+					if (canCast)
-+					{
-+						if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
-+							me->InterruptNonMeleeSpells(false);
-+
-+						me->CastSpell((*itr)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
-+						sLog->outDebug(LOG_FILTER_DATABASE_AI, "SmartScript::ProcessAction:: SMART_ACTION_CAST:: Creature %u casts spell %u on target %u with castflags %u",
-+							me->GetGUIDLow(), e.action.cast.spell, (*itr)->GetGUIDLow(), e.action.cast.flags);
-+					}
++                        me->CastSpell((*itr)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
++                        sLog->outDebug(LOG_FILTER_DATABASE_AI, "SmartScript::ProcessAction:: SMART_ACTION_CAST:: Creature %u casts spell %u on target %u with castflags %u",
++                            me->GetGUIDLow(), e.action.cast.spell, (*itr)->GetGUIDLow(), e.action.cast.flags);
++                    }
                  }
              }
  
@@ -37,7 +36,7 @@ index 1369188..d5eff69 100644
              if (!targets)
                  return;
  
-+			bool canCast;
++            bool canCast;
 +
              for (ObjectList::const_iterator itr = targets->begin(); itr != targets->end(); ++itr)
              {
@@ -45,22 +44,21 @@ index 1369188..d5eff69 100644
                  {
 -                    if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
 -                        tempLastInvoker->InterruptNonMeleeSpells(false);
--
++                    //Allowed to cast only if not casting (unless we interrupt ourself) or if spell is triggered
++                    canCast = !tempLastInvoker->IsNonMeleeSpellCasted(false) || (e.action.cast.flags & (SMARTCAST_TRIGGERED | SMARTCAST_INTERRUPT_PREVIOUS));
++
++                    if (canCast)
++                    {
++                        if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
++                            tempLastInvoker->InterruptNonMeleeSpells(false);
+ 
 -                    tempLastInvoker->CastSpell((*itr)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
 -                    sLog->outDebug(LOG_FILTER_DATABASE_AI, "SmartScript::ProcessAction:: SMART_ACTION_INVOKER_CAST: Invoker %u casts spell %u on target %u with castflags %u",
 -                        tempLastInvoker->GetGUIDLow(), e.action.cast.spell, (*itr)->GetGUIDLow(), e.action.cast.flags);
-+					//Allowed to cast only if not casting (unless we interrupt ourself) or if spell is triggered
-+					canCast = !tempLastInvoker->IsNonMeleeSpellCasted(false) || (e.action.cast.flags & (SMARTCAST_TRIGGERED | SMARTCAST_INTERRUPT_PREVIOUS));
-+
-+					if (canCast)
-+					{
-+						if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
-+							tempLastInvoker->InterruptNonMeleeSpells(false);
-+
-+						tempLastInvoker->CastSpell((*itr)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
-+						sLog->outDebug(LOG_FILTER_DATABASE_AI, "SmartScript::ProcessAction:: SMART_ACTION_INVOKER_CAST: Invoker %u casts spell %u on target %u with castflags %u",
-+							tempLastInvoker->GetGUIDLow(), e.action.cast.spell, (*itr)->GetGUIDLow(), e.action.cast.flags);
-+					}
++                        tempLastInvoker->CastSpell((*itr)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
++                        sLog->outDebug(LOG_FILTER_DATABASE_AI, "SmartScript::ProcessAction:: SMART_ACTION_INVOKER_CAST: Invoker %u casts spell %u on target %u with castflags %u",
++                            tempLastInvoker->GetGUIDLow(), e.action.cast.spell, (*itr)->GetGUIDLow(), e.action.cast.flags);
++                    }
                  }
              }
  
@@ -68,7 +66,7 @@ index 1369188..d5eff69 100644
                  return;
              }
  
-+			bool canCast;
++            bool canCast;
 +
              for (ObjectList::const_iterator itr = casters->begin(); itr != casters->end(); ++itr)
              {
@@ -76,22 +74,21 @@ index 1369188..d5eff69 100644
                  {
 -                    if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
 -                        (*itr)->ToUnit()->InterruptNonMeleeSpells(false);
--
++                    //Allowed to cast only if not casting (unless we interrupt ourself) or if spell is triggered
++                    canCast = !(*itr)->ToUnit()->IsNonMeleeSpellCasted(false) || (e.action.cast.flags & (SMARTCAST_TRIGGERED | SMARTCAST_INTERRUPT_PREVIOUS));
+ 
 -                    for (ObjectList::const_iterator it = targets->begin(); it != targets->end(); it++)
 -                        if (IsUnit(*it))
 -                            (*itr)->ToUnit()->CastSpell((*it)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
-+					//Allowed to cast only if not casting (unless we interrupt ourself) or if spell is triggered
-+					canCast = !(*itr)->ToUnit()->IsNonMeleeSpellCasted(false) || (e.action.cast.flags & (SMARTCAST_TRIGGERED | SMARTCAST_INTERRUPT_PREVIOUS));
++                    if (canCast)
++                    {
++                        if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
++                            (*itr)->ToUnit()->InterruptNonMeleeSpells(false);
 +
-+					if (canCast)
-+					{
-+						if (e.action.cast.flags & SMARTCAST_INTERRUPT_PREVIOUS)
-+							(*itr)->ToUnit()->InterruptNonMeleeSpells(false);
-+
-+						for (ObjectList::const_iterator it = targets->begin(); it != targets->end(); it++)
-+							if (IsUnit(*it))
-+								(*itr)->ToUnit()->CastSpell((*it)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
-+					}
++                        for (ObjectList::const_iterator it = targets->begin(); it != targets->end(); it++)
++                            if (IsUnit(*it))
++                                (*itr)->ToUnit()->CastSpell((*it)->ToUnit(), e.action.cast.spell, (e.action.cast.flags & SMARTCAST_TRIGGERED) ? true : false);
++                    }
                  }
              }
  
