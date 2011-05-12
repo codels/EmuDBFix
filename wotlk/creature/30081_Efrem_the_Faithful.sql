@@ -1,7 +1,7 @@
 UPDATE `creature_template` SET
-	`gossip_menu_id` = 9869,
-	`npcflag` = 1,
-	`AIName` = 'SmartAI'
+        `gossip_menu_id` = 9869,
+        `npcflag` = 1,
+        `AIName` = 'SmartAI'
 WHERE `entry` = 30081;
 
 DELETE FROM `gossip_menu` WHERE `entry` = 9869;

@@ -1,10 +1,10 @@
 UPDATE `creature_template` SET
-	`speed_walk` = 1.5,
-	`speed_run` = 2,
-	`unit_flags` = 642,
-	`VehicleId` = 316,
-	`AIName` = 'SmartAI',
-	`InhabitType` = 3
+        `speed_walk` = 1.5,
+        `speed_run` = 2,
+        `unit_flags` = 642,
+        `VehicleId` = 316,
+        `AIName` = 'SmartAI',
+        `InhabitType` = 3
 WHERE `entry` = 30468;
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` = 30468 AND `source_type` = 0;
