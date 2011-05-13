@@ -1,0 +1,1 @@
+UPDATE `quest_template` SET `NextQuestId`='26266', `NextQuestInChain`='26266' WHERE (`entry`='26270')
