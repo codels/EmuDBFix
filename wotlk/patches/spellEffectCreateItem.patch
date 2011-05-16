@@ -1,0 +1,57 @@
+diff --git a/src/server/game/Spells/SpellEffects.cpp b/src/server/game/Spells/SpellEffects.cpp
+index 2f8d07f..199101e 100755
+--- a/src/server/game/Spells/SpellEffects.cpp
++++ b/src/server/game/Spells/SpellEffects.cpp
+@@ -2390,10 +2390,25 @@ void Spell::EffectHealthLeech(SpellEffIndex effIndex)
+ 
+ void Spell::DoCreateItem(uint32 /*i*/, uint32 itemtype)
+ {
+-    if (!unitTarget || unitTarget->GetTypeId() != TYPEID_PLAYER)
++	if (!unitTarget)
++		return;
++
++	bool passenger = false;
++	Unit *charmer;
++	if (unitTarget->GetTypeId() == TYPEID_UNIT && unitTarget->ToCreature()->IsVehicle())
++		if (charmer = unitTarget->GetCharmer())
++			if (charmer->GetTypeId() == TYPEID_PLAYER)
++				passenger = true;
++
++    if (unitTarget->GetTypeId() != TYPEID_PLAYER && !passenger)
+         return;
+ 
+-    Player* player = (Player*)unitTarget;
++	Player* player;
++
++	if (passenger)
++		player = (Player*)charmer;
++	else
++		player = (Player*)unitTarget;
+ 
+     uint32 newitemid = itemtype;
+     ItemTemplate const *pProto = sObjectMgr->GetItemTemplate(newitemid);
+@@ -2507,9 +2522,22 @@ void Spell::EffectCreateItem(SpellEffIndex effIndex)
+ 
+ void Spell::EffectCreateItem2(SpellEffIndex effIndex)
+ {
+-    if (m_caster->GetTypeId() != TYPEID_PLAYER)
++	bool passenger = false;
++	Unit *charmer;
++	if (m_caster->GetTypeId() == TYPEID_UNIT && m_caster->ToCreature()->IsVehicle())
++		if (charmer = m_caster->GetCharmer())
++			if (charmer->GetTypeId() == TYPEID_PLAYER)
++				passenger = true;
++
++    if (m_caster->GetTypeId() != TYPEID_PLAYER && !passenger)
+         return;
+-    Player* player = (Player*)m_caster;
++
++	Player* player;
++
++	if (passenger)
++		player = (Player*)charmer;
++	else
++		player = (Player*)m_caster;
+ 
+     uint32 item_id = m_spellInfo->EffectItemType[effIndex];
+ 
