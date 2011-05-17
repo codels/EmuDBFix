@@ -1,0 +1,12 @@
+diff --git a/src/server/scripts/Northrend/AzjolNerub/ahnkahet/boss_amanitar.cpp b/src/server/scripts/Northrend/AzjolNerub/ahnkahet/boss_amanitar.cpp
+index 73ab650..78aa9fb 100644
+--- a/src/server/scripts/Northrend/AzjolNerub/ahnkahet/boss_amanitar.cpp
++++ b/src/server/scripts/Northrend/AzjolNerub/ahnkahet/boss_amanitar.cpp
+@@ -70,7 +70,6 @@ public:
+             uiBoltTimer = urand(15*IN_MILLISECONDS, 30*IN_MILLISECONDS);
+             uiSpawnTimer = 0;
+ 
+-            me->SetMeleeDamageSchool(SPELL_SCHOOL_NATURE);
+             me->ApplySpellImmune(0, IMMUNITY_SCHOOL, SPELL_SCHOOL_MASK_NATURE, true);
+ 
+             if (pInstance)
