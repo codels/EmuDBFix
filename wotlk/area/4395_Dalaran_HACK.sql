@@ -1,3 +1,4 @@
+DELETE FROM `spell_area` WHERE `spell` BETWEEN 70971 AND 70974;
 INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`,
 `aura_spell`, `racemask`, `gender`, `autocast`) VALUES
 (70971, 4395, 24451, 1, 24451, 0, 690, 1, 1),

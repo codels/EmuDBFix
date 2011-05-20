@@ -1,3 +1,3 @@
 UPDATE `creature_template` SET
-	`InhabitType` = 4
+        `InhabitType` = 4
 WHERE `entry` = 32492;
