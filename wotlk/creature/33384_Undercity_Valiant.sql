@@ -4,6 +4,10 @@ UPDATE `creature_template` SET
         `questItem1` = 45127
 WHERE `entry` = 33384;
 
+-- for ytdb
+DELETE FROM `gossip_scripts` WHERE `id` = 10473;
+DELETE FROM `db_script_string` WHERE `entry` = 2000000449;
+
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 10473;
 INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`,
 `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`) VALUES
@@ -19,12 +23,8 @@ DELETE FROM `creature_text` WHERE `entry` = 33384;
 INSERT INTO `creature_text` (`entry`, `text`) VALUES
 (33384, 'I yield to you.');
 
-/*
--- for ytdb
-DELETE FROM `gossip_scripts` WHERE `id` = 10473;
+-- clear eventai for creature
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 10473;
-DELETE FROM `db_script_string` WHERE `entry` = 2000000449;
-*/
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` = 33384 AND `source_type` = 0;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`,
