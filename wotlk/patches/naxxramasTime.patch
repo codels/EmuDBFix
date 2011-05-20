@@ -1,0 +1,235 @@
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_anubrekhan.cpp b/src/server/scripts/Northrend/Naxxramas/boss_anubrekhan.cpp
+index 999676d..e82bf95 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_anubrekhan.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_anubrekhan.cpp
+@@ -163,7 +163,7 @@ public:
+                         // TODO : Add Text
+                         DoCast(me, RAID_MODE(SPELL_LOCUST_SWARM_10, SPELL_LOCUST_SWARM_25));
+                         DoSummon(MOB_CRYPT_GUARD, GuardSummonPos, 0, TEMPSUMMON_CORPSE_DESPAWN);
+-                        events.ScheduleEvent(EVENT_LOCUST, 90000);
++                        events.ScheduleEvent(EVENT_LOCUST, 80000);
+                         break;
+                     case EVENT_SPAWN_GUARDIAN_NORMAL:
+                         // TODO : Add Text
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_faerlina.cpp b/src/server/scripts/Northrend/Naxxramas/boss_faerlina.cpp
+index a86f77c..0d1bf5d 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_faerlina.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_faerlina.cpp
+@@ -72,7 +72,7 @@ class boss_faerlina : public CreatureScript
+                 DoScriptText(RAND(SAY_AGGRO_1, SAY_AGGRO_2, SAY_AGGRO_3, SAY_AGGRO_4), me);
+                 events.ScheduleEvent(EVENT_POISON, urand(10000, 15000));
+                 events.ScheduleEvent(EVENT_FIRE, urand(6000, 18000));
+-                events.ScheduleEvent(EVENT_FRENZY, urand(60000, 80000));
++                events.ScheduleEvent(EVENT_FRENZY, 60000);
+             }
+ 
+             void Reset()
+@@ -161,7 +161,7 @@ class boss_faerlina : public CreatureScript
+                             else
+                                 _delayFrenzy = true;
+ 
+-                            events.ScheduleEvent(EVENT_FRENZY, urand(60000, 80000));
++                            events.ScheduleEvent(EVENT_FRENZY, 60000);
+                             break;
+                     }
+                 }
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_gluth.cpp b/src/server/scripts/Northrend/Naxxramas/boss_gluth.cpp
+index dccce84..0937d2f 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_gluth.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_gluth.cpp
+@@ -80,8 +80,8 @@ public:
+             _EnterCombat();
+             events.ScheduleEvent(EVENT_WOUND, 10000);
+             events.ScheduleEvent(EVENT_ENRAGE, 15000);
+-            events.ScheduleEvent(EVENT_DECIMATE, 105000);
+-            events.ScheduleEvent(EVENT_BERSERK, 8*60000);
++            events.ScheduleEvent(EVENT_DECIMATE, 110000);
++            events.ScheduleEvent(EVENT_BERSERK, 420000);
+             events.ScheduleEvent(EVENT_SUMMON, 15000);
+         }
+ 
+@@ -115,11 +115,11 @@ public:
+                     case EVENT_DECIMATE:
+                         // TODO : Add missing text
+                         DoCastAOE(SPELL_DECIMATE);
+-                        events.ScheduleEvent(EVENT_DECIMATE, 105000);
++                        events.ScheduleEvent(EVENT_DECIMATE, 104000);
+                         break;
+                     case EVENT_BERSERK:
+                         DoCast(me, SPELL_BERSERK);
+-                        events.ScheduleEvent(EVENT_BERSERK, 5*60000);
++                        events.ScheduleEvent(EVENT_BERSERK, 300000);
+                         break;
+                     case EVENT_SUMMON:
+                         for (int32 i = 0; i < RAID_MODE(1, 2); ++i)
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_grobbulus.cpp b/src/server/scripts/Northrend/Naxxramas/boss_grobbulus.cpp
+index 098b22e..b6e98de 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_grobbulus.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_grobbulus.cpp
+@@ -54,9 +54,9 @@ public:
+         {
+             _EnterCombat();
+             events.ScheduleEvent(EVENT_CLOUD, 15000);
+-            events.ScheduleEvent(EVENT_INJECT, 20000);
+-            events.ScheduleEvent(EVENT_SPRAY, 15000+rand()%15000); //not sure
+-            events.ScheduleEvent(EVENT_BERSERK, 12*60000);
++            events.ScheduleEvent(EVENT_INJECT, 10000);
++            events.ScheduleEvent(EVENT_SPRAY, 15000); //not sure
++            events.ScheduleEvent(EVENT_BERSERK, 720000);
+         }
+ 
+         void SpellHitTarget(Unit *pTarget, const SpellEntry *spell)
+@@ -81,20 +81,20 @@ public:
+                 {
+                     case EVENT_CLOUD:
+                         DoCastAOE(SPELL_POISON_CLOUD);
+-                        events.ScheduleEvent(EVENT_CLOUD, 15000);
++                        events.RescheduleEvent(EVENT_CLOUD, 15000);
+                         return;
+                     case EVENT_BERSERK:
+                         DoCastAOE(SPELL_BERSERK);
+                         return;
+                     case EVENT_SPRAY:
+                         DoCastAOE(SPELL_SLIME_SPRAY);
+-                        events.ScheduleEvent(EVENT_SPRAY, 15000+rand()%15000);
++                        events.RescheduleEvent(EVENT_SPRAY, 15000);
+                         return;
+                     case EVENT_INJECT:
+                         if (Unit *pTarget = SelectTarget(SELECT_TARGET_RANDOM, 1))
+                             if (!pTarget->HasAura(SPELL_MUTATING_INJECTION))
+                                 DoCast(pTarget, SPELL_MUTATING_INJECTION);
+-                        events.ScheduleEvent(EVENT_INJECT, 8000 + uint32(120 * me->GetHealthPct()));
++                        events.RescheduleEvent(EVENT_INJECT, 10000);
+                         return;
+                 }
+             }
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_kelthuzad.cpp b/src/server/scripts/Northrend/Naxxramas/boss_kelthuzad.cpp
+index f2e0bf6..01689ac 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_kelthuzad.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_kelthuzad.cpp
+@@ -365,7 +365,7 @@ public:
+             events.ScheduleEvent(EVENT_WASTE, 15000);
+             events.ScheduleEvent(EVENT_ABOMIN, 30000);
+             events.ScheduleEvent(EVENT_WEAVER, 50000);
+-            events.ScheduleEvent(EVENT_PHASE, 228000);
++            events.ScheduleEvent(EVENT_PHASE, 225000);
+         }
+ 
+         void FindGameObjects()
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_loatheb.cpp b/src/server/scripts/Northrend/Naxxramas/boss_loatheb.cpp
+index 63a7d69..dfad911 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_loatheb.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_loatheb.cpp
+@@ -54,7 +54,7 @@ public:
+         {
+             _EnterCombat();
+             events.ScheduleEvent(EVENT_AURA, 10000);
+-            events.ScheduleEvent(EVENT_BLOOM, 5000);
++            events.ScheduleEvent(EVENT_BLOOM, GetDifficulty() == RAID_DIFFICULTY_25MAN_NORMAL ? 18000 : 36000);
+             events.ScheduleEvent(EVENT_DOOM, 120000);
+         }
+ 
+@@ -71,13 +71,13 @@ public:
+                 {
+                     case EVENT_AURA:
+                         DoCastAOE(SPELL_NECROTIC_AURA);
+-                        events.ScheduleEvent(EVENT_AURA, 20000);
++                        events.ScheduleEvent(EVENT_AURA, 17000);
+                         break;
+                     case EVENT_BLOOM:
+                         // TODO : Add missing text
+                         DoCastAOE(SPELL_SUMMON_SPORE, true);
+                         DoCastAOE(RAID_MODE(SPELL_DEATHBLOOM, H_SPELL_DEATHBLOOM));
+-                        events.ScheduleEvent(EVENT_BLOOM, 30000);
++                        events.ScheduleEvent(EVENT_BLOOM, GetDifficulty() == RAID_DIFFICULTY_25MAN_NORMAL ? 18000 : 36000);
+                         break;
+                     case EVENT_DOOM:
+                         DoCastAOE(RAID_MODE(SPELL_INEVITABLE_DOOM, H_SPELL_INEVITABLE_DOOM));
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_maexxna.cpp b/src/server/scripts/Northrend/Naxxramas/boss_maexxna.cpp
+index 50ee492..c112578 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_maexxna.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_maexxna.cpp
+@@ -77,7 +77,7 @@ public:
+             _EnterCombat();
+             enraged = false;
+             events.ScheduleEvent(EVENT_WRAP, 20000);
+-            events.ScheduleEvent(EVENT_SPRAY, 40000);
++            events.ScheduleEvent(EVENT_SPRAY, 40500);
+             events.ScheduleEvent(EVENT_SHOCK, urand(5000, 10000));
+             events.ScheduleEvent(EVENT_POISON, urand(10000, 15000));
+             events.ScheduleEvent(EVENT_SUMMON, 30000);
+@@ -117,7 +117,7 @@ public:
+                         break;
+                     case EVENT_SPRAY:
+                         DoCastAOE(RAID_MODE(SPELL_WEB_SPRAY_10, SPELL_WEB_SPRAY_25));
+-                        events.ScheduleEvent(EVENT_SPRAY, 40000);
++                        events.ScheduleEvent(EVENT_SPRAY, 40500);
+                         break;
+                     case EVENT_SHOCK:
+                         DoCastAOE(RAID_MODE(SPELL_POISON_SHOCK_10, SPELL_POISON_SHOCK_25));
+@@ -136,7 +136,7 @@ public:
+                         uint8 amount = urand(8, 10);
+                         for (uint8 i = 0; i < amount; ++i)
+                             DoSummon(MOB_SPIDERLING, me, 0, TEMPSUMMON_CORPSE_DESPAWN);
+-                        events.ScheduleEvent(EVENT_SUMMON, 40000);
++                        events.ScheduleEvent(EVENT_SUMMON, 30000);
+                         break;
+                 }
+             }
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_razuvious.cpp b/src/server/scripts/Northrend/Naxxramas/boss_razuvious.cpp
+index 7056eb0..a9079ce 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_razuvious.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_razuvious.cpp
+@@ -93,7 +93,7 @@ public:
+             _EnterCombat();
+             DoPlaySoundToSet(me, SOUND_AGGRO);
+             events.ScheduleEvent(EVENT_STRIKE, 30000);
+-            events.ScheduleEvent(EVENT_SHOUT, 25000);
++            events.ScheduleEvent(EVENT_SHOUT, 16000);
+             events.ScheduleEvent(EVENT_COMMAND, 40000);
+             events.ScheduleEvent(EVENT_KNIFE, 10000);
+         }
+@@ -115,7 +115,7 @@ public:
+                         return;
+                     case EVENT_SHOUT:
+                         DoCastAOE(SPELL_DISRUPTING_SHOUT);
+-                        events.ScheduleEvent(EVENT_SHOUT, 25000);
++                        events.ScheduleEvent(EVENT_SHOUT, 16000);
+                         return;
+                     case EVENT_KNIFE:
+                         if (Unit *pTarget = SelectTarget(SELECT_TARGET_RANDOM, 0, 45.0f))
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_sapphiron.cpp b/src/server/scripts/Northrend/Naxxramas/boss_sapphiron.cpp
+index 9bd0666..08f71c8 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_sapphiron.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_sapphiron.cpp
+@@ -204,7 +204,7 @@ public:
+             events.SetPhase(PHASE_GROUND);
+             events.ScheduleEvent(EVENT_CLEAVE, 5000+rand()%10000, 0, PHASE_GROUND);
+             events.ScheduleEvent(EVENT_TAIL, 5000+rand()%10000, 0, PHASE_GROUND);
+-            events.ScheduleEvent(EVENT_DRAIN, 24000, 0, PHASE_GROUND);
++            events.ScheduleEvent(EVENT_DRAIN, 22000, 0, PHASE_GROUND);
+             events.ScheduleEvent(EVENT_BLIZZARD, 5000+rand()%5000, 0, PHASE_GROUND);
+             events.ScheduleEvent(EVENT_FLIGHT, 45000);
+         }
+@@ -260,7 +260,7 @@ public:
+                             return;
+                         case EVENT_DRAIN:
+                             DoCastAOE(SPELL_LIFE_DRAIN);
+-                            events.ScheduleEvent(EVENT_DRAIN, 24000, 0, PHASE_GROUND);
++                            events.ScheduleEvent(EVENT_DRAIN, 22000, 0, PHASE_GROUND);
+                             return;
+                         case EVENT_BLIZZARD:
+                         {
+diff --git a/src/server/scripts/Northrend/Naxxramas/boss_thaddius.cpp b/src/server/scripts/Northrend/Naxxramas/boss_thaddius.cpp
+index c61f5bd..75c1ef5 100644
+--- a/src/server/scripts/Northrend/Naxxramas/boss_thaddius.cpp
++++ b/src/server/scripts/Northrend/Naxxramas/boss_thaddius.cpp
+@@ -186,7 +186,7 @@ public:
+             DoScriptText(RAND(SAY_AGGRO_1, SAY_AGGRO_2, SAY_AGGRO_3), me);
+             events.ScheduleEvent(EVENT_SHIFT, 30000);
+             events.ScheduleEvent(EVENT_CHAIN, urand(10000, 20000));
+-            events.ScheduleEvent(EVENT_BERSERK, 360000);
++            events.ScheduleEvent(EVENT_BERSERK, 365000);
+         }
+ 
+         void DamageTaken(Unit * /*pDoneBy*/, uint32 & /*uiDamage*/)
