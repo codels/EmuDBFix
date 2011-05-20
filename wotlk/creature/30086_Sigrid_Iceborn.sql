@@ -19,6 +19,8 @@ INSERT INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `language
 (30086, 0, 0, 'Taste my steel, little girl!', 0, 0, 0, 0, 0, 0, ''),
 (30086, 1, 0, 'You fight well, little one. I am bested for now. We will meet again I assure you. When we do I will be better prepared!', 0, 0, 0, 0, 0, 0, '');
 
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 30086;
+
 DELETE FROM `smart_scripts` WHERE `entryorguid` = 30086 AND `source_type` = 0;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`,
 `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`,

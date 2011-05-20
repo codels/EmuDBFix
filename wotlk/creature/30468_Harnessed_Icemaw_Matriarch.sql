@@ -7,6 +7,8 @@ UPDATE `creature_template` SET
         `InhabitType` = 3
 WHERE `entry` = 30468;
 
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 30468;
+
 DELETE FROM `smart_scripts` WHERE `entryorguid` = 30468 AND `source_type` = 0;
 INSERT INTO `smart_scripts`
 (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`,

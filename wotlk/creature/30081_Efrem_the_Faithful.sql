@@ -12,6 +12,8 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`) VALUES
 (9869, 0, 0, 'I challenge you to a duel, Scarlet scum!', 1, 1, 0, 0, 0, 0, 0, NULL);
 
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 30081;
+
 DELETE FROM `smart_scripts` WHERE `entryorguid` = 30081 AND `source_type` = 0;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`,
 `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`,

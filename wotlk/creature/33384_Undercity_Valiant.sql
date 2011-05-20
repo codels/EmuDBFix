@@ -4,7 +4,6 @@ UPDATE `creature_template` SET
         `questItem1` = 45127
 WHERE `entry` = 33384;
 
--- for ytdb
 DELETE FROM `gossip_scripts` WHERE `id` = 10473;
 DELETE FROM `db_script_string` WHERE `entry` = 2000000449;
 
@@ -23,7 +22,6 @@ DELETE FROM `creature_text` WHERE `entry` = 33384;
 INSERT INTO `creature_text` (`entry`, `text`) VALUES
 (33384, 'I yield to you.');
 
--- clear eventai for creature
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 10473;
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` = 33384 AND `source_type` = 0;
