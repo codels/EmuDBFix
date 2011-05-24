@@ -1,0 +1,2 @@
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Я уничтожу Серебярный Авангард! Я сокрушу Плеть!' WHERE `entry` = -483;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Пьем до дна, братья мои!' WHERE `entry` = -485;
