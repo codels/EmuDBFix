@@ -1,2 +1,3 @@
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я уничтожу Серебярный Авангард! Я сокрушу Плеть!' WHERE `entry` = -483;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Пьем до дна, братья мои!' WHERE `entry` = -485;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Теперь, когда мы обладаем силой диких богов, горящей в нашей крови, никто, даже Король-лич, не сможет остановить нас!' WHERE `entry` = -480;
