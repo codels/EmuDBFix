@@ -134,7 +134,7 @@ index 63a7d69..dfad911 100644
                      case EVENT_AURA:
                          DoCastAOE(SPELL_NECROTIC_AURA);
 -                        events.ScheduleEvent(EVENT_AURA, 20000);
-+                        events.ScheduleEvent(EVENT_AURA, 17000);
++                        events.ScheduleEvent(EVENT_AURA, 20000);
                          break;
                      case EVENT_BLOOM:
                          // TODO : Add missing text
