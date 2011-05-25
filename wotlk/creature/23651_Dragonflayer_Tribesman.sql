@@ -18,4 +18,4 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 
 DELETE FROM `creature_text` WHERE `entry` = 23651;
 INSERT INTO `creature_text` (`entry`, `text`, `type`, `probability`, `emote`, `comment`) VALUES
-(23651, 'Твоя смерть близка!', 12, 100, 1, 'Dragonflayer Tribesman');
+(23651, 'РўРІРѕСЏ СЃРјРµСЂС‚СЊ Р±Р»РёР·РєР°!', 12, 100, 1, 'Dragonflayer Tribesman');
