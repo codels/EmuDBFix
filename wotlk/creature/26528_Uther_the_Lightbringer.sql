@@ -1,0 +1,8 @@
+DELETE FROM `script_texts` WHERE `npc_entry` = 26528;
+INSERT INTO `script_texts` (`npc_entry`, `entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
+(26528, -1595071, 'Watch your tone with me, boy. You may be the prince, but I\'m still your superior as a paladin!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Следи за своим тоном, юноша. Хоть ты и принц, но, как паладин, ты все еще находишься под моим командованием.', 12839, 0, 0, 25, 'culling SAY_PHASE102'),
+(26528, -1595074, 'What?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Что?', 12840, 0, 0, 5, 'culling SAY_PHASE105'),
+(26528, -1595076, 'How can you even consider that? There\'s got to be some other way.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Как ты мог даже подумать об этом?! Должен быть какой-то другой путь!', 12841, 0, 0, 1, 'culling SAY_PHASE107'),
+(26528, -1595078, 'You are not my king yet, boy! Nor would I obey that command even if you were!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Пока ты еще не король, юноша. Но этот приказ я не выполнил бы, будь ты хоть трижды королем!', 12842, 1, 0, 22, 'culling SAY_PHASE109'),
+(26528, -1595080, 'Treason? Have you lost your mind, Arthas?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Измену? Ты совсем лишился рассудка, Артас?', 12843, 0, 0, 5, 'culling SAY_PHASE111'),
+(26528, -1595084, 'You\'ve just crossed a terrible threshold, Arthas.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Ты пересек опасную черту, Артас.', 12844, 0, 0, 25, 'culling SAY_PHASE115');
