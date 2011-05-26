@@ -1,0 +1,4 @@
+DELETE FROM `script_texts` WHERE `npc_entry` = 26497;
+INSERT INTO `script_texts` (`npc_entry`, `entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+(26497, -1595082, 'Arthas! You can\'t just--', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Артас! Ты не можешь так просто…', 12837, 0, 0, 1, 'culling SAY_PHASE113'),
+(26497, -1595086, 'I\'m sorry, Arthas. I can\'t watch you do this.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Прости, Артас. Я не могу на это смотреть.', 12838, 0, 0, 1, 'culling SAY_PHASE117');
