@@ -1,3 +1,4 @@
+-- Hack
 DELETE FROM `spell_area` WHERE `spell` BETWEEN 70971 AND 70974;
 INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`,
 `aura_spell`, `racemask`, `gender`, `autocast`) VALUES

@@ -1,3 +1,4 @@
+-- Not blizzlike!
 UPDATE `quest_template` SET
 	`Method` = 2,
 	`ZoneOrSort` = 33,
