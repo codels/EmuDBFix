@@ -45,6 +45,8 @@ INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`,
 
 
 UPDATE `creature_template` SET
+	faction_A = 14,
+	faction_H = 14,
 	npcflag = 0,
 	speed_walk = 1,
 	speed_run = 1.2,
@@ -117,6 +119,8 @@ DELETE FROM `creature_template_addon` WHERE `entry` = 35328;
 DELETE FROM `creature_template_addon` WHERE `entry` = 35330;
 
 UPDATE `creature_template` SET
+	faction_A = 14,
+	faction_H = 14,
 	unit_flags = 33554562,
 	type_flags = 0,
 	spell1 = 0,
