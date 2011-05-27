@@ -51,8 +51,8 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 `option_text_loc8`, `box_text_loc1`, `box_text_loc2`, `box_text_loc3`, `box_text_loc4`, `box_text_loc5`,
 `box_text_loc6`, `box_text_loc7`, `box_text_loc8`) VALUES
 (10371, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
-'Купить двойную специализацию талантов.', NULL, NULL, NULL, NULL, NULL, NULL, NULL,
-'Вы уверены что хотите купить двойную специализацию талантов?');
+'РљСѓРїРёС‚СЊ РґРІРѕР№РЅСѓСЋ СЃРїРµС†РёР°Р»РёР·Р°С†РёСЋ С‚Р°Р»Р°РЅС‚РѕРІ.', NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+'Р’С‹ СѓРІРµСЂРµРЅС‹ С‡С‚Рѕ С…РѕС‚РёС‚Рµ РєСѓРїРёС‚СЊ РґРІРѕР№РЅСѓСЋ СЃРїРµС†РёР°Р»РёР·Р°С†РёСЋ С‚Р°Р»Р°РЅС‚РѕРІ?');
 
 DELETE FROM `gossip_menu` WHERE `entry` = 10371;
 INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES
@@ -82,9 +82,9 @@ INSERT INTO `locales_npc_text` (`entry`, `Text0_0_loc1`, `Text0_0_loc2`, `Text0_
 `Text7_0_loc6`, `Text7_0_loc7`, `Text7_0_loc8`, `Text7_1_loc1`, `Text7_1_loc2`, `Text7_1_loc3`,
 `Text7_1_loc4`, `Text7_1_loc5`, `Text7_1_loc6`, `Text7_1_loc7`, `Text7_1_loc8`) VALUES
 (14391, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
-'Двойная специализация позволяет иметь доступ к двум наборам талантов. При переключении между ними вы получаете доступ ко второму набору символов и панелей команд. Переключение невозможно во время боя и оно потребует всех ваших сил.',
+'Р”РІРѕР№РЅР°СЏ СЃРїРµС†РёР°Р»РёР·Р°С†РёСЏ РїРѕР·РІРѕР»СЏРµС‚ РёРјРµС‚СЊ РґРѕСЃС‚СѓРї Рє РґРІСѓРј РЅР°Р±РѕСЂР°Рј С‚Р°Р»Р°РЅС‚РѕРІ. РџСЂРё РїРµСЂРµРєР»СЋС‡РµРЅРёРё РјРµР¶РґСѓ РЅРёРјРё РІС‹ РїРѕР»СѓС‡Р°РµС‚Рµ РґРѕСЃС‚СѓРї РєРѕ РІС‚РѕСЂРѕРјСѓ РЅР°Р±РѕСЂСѓ СЃРёРјРІРѕР»РѕРІ Рё РїР°РЅРµР»РµР№ РєРѕРјР°РЅРґ. РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ РІРѕ РІСЂРµРјСЏ Р±РѕСЏ Рё РѕРЅРѕ РїРѕС‚СЂРµР±СѓРµС‚ РІСЃРµС… РІР°С€РёС… СЃРёР».',
 NULL, NULL, NULL, NULL, NULL, NULL, NULL,
-'Двойная специализация позволяет иметь доступ к двум наборам талантов. При переключении между ними вы получаете доступ ко второму набору символов и панелей команд. Переключение невозможно во время боя и оно потребует всех ваших сил.',
+'Р”РІРѕР№РЅР°СЏ СЃРїРµС†РёР°Р»РёР·Р°С†РёСЏ РїРѕР·РІРѕР»СЏРµС‚ РёРјРµС‚СЊ РґРѕСЃС‚СѓРї Рє РґРІСѓРј РЅР°Р±РѕСЂР°Рј С‚Р°Р»Р°РЅС‚РѕРІ. РџСЂРё РїРµСЂРµРєР»СЋС‡РµРЅРёРё РјРµР¶РґСѓ РЅРёРјРё РІС‹ РїРѕР»СѓС‡Р°РµС‚Рµ РґРѕСЃС‚СѓРї РєРѕ РІС‚РѕСЂРѕРјСѓ РЅР°Р±РѕСЂСѓ СЃРёРјРІРѕР»РѕРІ Рё РїР°РЅРµР»РµР№ РєРѕРјР°РЅРґ. РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ РІРѕ РІСЂРµРјСЏ Р±РѕСЏ Рё РѕРЅРѕ РїРѕС‚СЂРµР±СѓРµС‚ РІСЃРµС… РІР°С€РёС… СЃРёР».',
 NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL,
 NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL,
 NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL,
@@ -94,8 +94,8 @@ NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, 
 NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '');
 
 
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Я хочу узнать больше об учении Света.' WHERE `menu_id` = 6647 AND `id` = 0;
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Я хочу забыть свои таланты.' WHERE `menu_id` = 6647 AND `id` = 1;
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Я хочу расспросить о двойной специализации.' WHERE `menu_id` = 6647 AND `id` = 2;
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Да. Я желаю.' WHERE `menu_id` = 4461 AND `id` = 0;
-UPDATE `script_texts` SET `content_loc8` = 'Что? Этого не может быть!' WHERE `entry` = -1595091;
+UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'РЇ С…РѕС‡Сѓ СѓР·РЅР°С‚СЊ Р±РѕР»СЊС€Рµ РѕР± СѓС‡РµРЅРёРё РЎРІРµС‚Р°.' WHERE `menu_id` = 6647 AND `id` = 0;
+UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'РЇ С…РѕС‡Сѓ Р·Р°Р±С‹С‚СЊ СЃРІРѕРё С‚Р°Р»Р°РЅС‚С‹.' WHERE `menu_id` = 6647 AND `id` = 1;
+UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'РЇ С…РѕС‡Сѓ СЂР°СЃСЃРїСЂРѕСЃРёС‚СЊ Рѕ РґРІРѕР№РЅРѕР№ СЃРїРµС†РёР°Р»РёР·Р°С†РёРё.' WHERE `menu_id` = 6647 AND `id` = 2;
+UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Р”Р°. РЇ Р¶РµР»Р°СЋ.' WHERE `menu_id` = 4461 AND `id` = 0;
+UPDATE `script_texts` SET `content_loc8` = 'Р§С‚Рѕ? Р­С‚РѕРіРѕ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ!' WHERE `entry` = -1595091;
