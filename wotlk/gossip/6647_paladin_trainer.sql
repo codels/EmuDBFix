@@ -11,9 +11,9 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 `option_text_loc3`, `option_text_loc4`, `option_text_loc5`, `option_text_loc6`, `option_text_loc7`,
 `option_text_loc8`, `box_text_loc1`, `box_text_loc2`, `box_text_loc3`, `box_text_loc4`, `box_text_loc5`,
 `box_text_loc6`, `box_text_loc7`, `box_text_loc8`) VALUES
-(6647, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу узнать больше об учении Света.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6647, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу забыть свои таланты.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6647, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу расспросить о двойной специализации.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(6647, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6647, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6647, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = 6647;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ElseGroup`,
