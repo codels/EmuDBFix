@@ -1,0 +1,16 @@
+diff --git a/src/server/scripts/Kalimdor/CavernsOfTime/CullingOfStratholme/instance_culling_of_stratholme.cpp b/src/server/scripts/Kalimdor/CavernsOfTime/CullingOfStratholme/instance_culling_of_stratholme.cpp
+index e80b0f7..5a2dddc 100644
+--- a/src/server/scripts/Kalimdor/CavernsOfTime/CullingOfStratholme/instance_culling_of_stratholme.cpp
++++ b/src/server/scripts/Kalimdor/CavernsOfTime/CullingOfStratholme/instance_culling_of_stratholme.cpp
+@@ -183,7 +183,11 @@ class instance_culling_of_stratholme : public InstanceMapScript
+                             if (Creature* chromie = instance->SummonCreature(NPC_CHROMIE_2, ChromieSummonPos))
+                                 if (!instance->GetPlayers().isEmpty())
+                                     if (Player* plr = instance->GetPlayers().getFirst()->getSource())
++                                    {
++                                        // killCredit for quest 13149
++                                        plr->KilledMonsterCredit(30996, 0);
+                                         sCreatureTextMgr->SendChat(chromie, SAY_CRATES_COMPLETED, plr->GetGUID(), CHAT_MSG_ADDON, LANG_ADDON, TEXT_RANGE_MAP);
++                                    }
+                         }
+                         DoUpdateWorldState(WORLDSTATE_CRATES_REVEALED, _crateCount);
+                         break;
