@@ -3,20 +3,14 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (4461, 0, 11, 'Yes. I do.', 16, 16, 0, 0, 0, 0, 0, NULL);
 
 DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` = 4461;
-INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `option_text_loc2`,
-`option_text_loc3`, `option_text_loc4`, `option_text_loc5`, `option_text_loc6`, `option_text_loc7`,
-`option_text_loc8`, `box_text_loc1`, `box_text_loc2`, `box_text_loc3`, `box_text_loc4`,
-`box_text_loc5`, `box_text_loc6`, `box_text_loc7`, `box_text_loc8`) VALUES
-(4461, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `option_text_loc2`, `option_text_loc3`, `option_text_loc4`, `option_text_loc5`, `option_text_loc6`, `option_text_loc7`, `option_text_loc8`, `box_text_loc1`, `box_text_loc2`, `box_text_loc3`, `box_text_loc4`, `box_text_loc5`, `box_text_loc6`, `box_text_loc7`, `box_text_loc8`) VALUES
+(4461, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Да. Так.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 DELETE FROM `gossip_menu` WHERE `entry` = 4461;
-INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES
-(4461, 5673);
+INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES (4461, 5673);
 
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 6647;
-INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`,
-`npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`,
-`box_money`, `box_text`) VALUES
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`) VALUES
 (6647, 0, 2, 'I would like to train further in the ways of the Light.', 5, 16, 0, 0, 0, 0, 0, NULL),
 (6647, 1, 0, 'I wish to unlearn my talents.', 1, 16, 4461, 0, 0, 0, 0, NULL),
 (6647, 2, 0, 'Purchase a Dual Talent Specialization', 1, 16, 10371, 0, 0, 0, 0, NULL);
@@ -26,9 +20,9 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 `option_text_loc3`, `option_text_loc4`, `option_text_loc5`, `option_text_loc6`, `option_text_loc7`,
 `option_text_loc8`, `box_text_loc1`, `box_text_loc2`, `box_text_loc3`, `box_text_loc4`, `box_text_loc5`,
 `box_text_loc6`, `box_text_loc7`, `box_text_loc8`) VALUES
-(6647, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6647, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6647, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(6647, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу узнать больше об учении Света.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6647, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу забыть свои таланты.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6647, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я хочу расспросить о двойной специализации.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = 6647;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ElseGroup`,
@@ -39,11 +33,8 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 (15, 6647, 2, 0, 25, 63644, 0, 0, 0, '', NULL);
 
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 10371;
-INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`,
-`npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`,
-`box_money`, `box_text`) VALUES
-(10371, 0, 0, 'Purchase a Dual Talent Specialization.', 18, 16, 0, 0, 0, 0, 100000,
-'Are you sure you wish to purchase a Dual Talent Specialization?');
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`) VALUES
+(10371, 0, 0, 'Purchase a Dual Talent Specialization.', 18, 16, 0, 0, 0, 0, 100000, 'Are you sure you wish to purchase a Dual Talent Specialization?');
 
 DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` = 10371;
 INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `option_text_loc2`,
@@ -55,8 +46,7 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc1`, `
 'Вы уверены что хотите купить двойную специализацию талантов?');
 
 DELETE FROM `gossip_menu` WHERE `entry` = 10371;
-INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES
-(10371, 14391);
+INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES (10371, 14391);
 
 DELETE FROM `locales_npc_text` WHERE `entry` = 14391;
 INSERT INTO `locales_npc_text` (`entry`, `Text0_0_loc1`, `Text0_0_loc2`, `Text0_0_loc3`,
@@ -93,9 +83,4 @@ NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 
 NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL,
 NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '');
 
-
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Я хочу узнать больше об учении Света.' WHERE `menu_id` = 6647 AND `id` = 0;
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Я хочу забыть свои таланты.' WHERE `menu_id` = 6647 AND `id` = 1;
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Я хочу расспросить о двойной специализации.' WHERE `menu_id` = 6647 AND `id` = 2;
-UPDATE `locales_gossip_menu_option` SET `option_text_loc8` = 'Да. Я желаю.' WHERE `menu_id` = 4461 AND `id` = 0;
 UPDATE `script_texts` SET `content_loc8` = 'Что? Этого не может быть!' WHERE `entry` = -1595091;
