@@ -1,3 +1,10 @@
+UPDATE `creature_template` SET
+        `AIName` = '',
+        `ScriptName` = 'boss_balinda'
+WHERE `entry` = 11949;
+
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 11949;
+
 DELETE FROM `script_texts` WHERE `npc_entry` = 11949 OR `entry` IN (-1810023, -1810024);
 INSERT INTO `script_texts` (`npc_entry`, `entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`,
 `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`,
