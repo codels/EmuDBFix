@@ -1,3 +1,10 @@
+UPDATE `creature_template` SET
+        `AIName` = '',
+        `ScriptName` = 'npc_arthas'
+WHERE `entry` = 26499;
+
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 26499;
+
 DELETE FROM `script_texts` WHERE `npc_entry` = 26499;
 INSERT INTO `script_texts` (`npc_entry`, `entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
 (26499, -1595070, 'Glad you could make it, Uther.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Я рад, что ты пришел, Утер!', 12828, 0, 0, 1, 'culling SAY_PHASE101'),
