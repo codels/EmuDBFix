@@ -10,7 +10,7 @@ DELETE FROM `db_script_string` WHERE `entry` = 2000000449;
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = 10473;
 INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`,
 `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`) VALUES
-(10473, 0, 0, I am ready to fight!, 1, 1, 0, 0, 0, 0, 0, NULL);
+(10473, 0, 0, 'I am ready to fight!', 1, 1, 0, 0, 0, 0, 0, NULL);
 
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = 10473;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ElseGroup`, `ConditionTypeOrReference`,
