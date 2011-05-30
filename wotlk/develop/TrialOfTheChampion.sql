@@ -1,15 +1,15 @@
 UPDATE `creature_template` SET
-	faction_A = 14,
-	faction_H = 14,
-	npcflag = 0,
-	speed_walk = 1,
-	speed_run = 1.4,
-	mindmg = 422,
-	maxdmg = 586,
-	attackpower = 642,
-	rangeattacktime = 0,
-	unit_flags = 0,
-	ScriptName = 'generic_vehicleAI_toc5'
+        faction_A = 14,
+        faction_H = 14,
+        npcflag = 0,
+        speed_walk = 1,
+        speed_run = 1.4,
+        mindmg = 422,
+        maxdmg = 586,
+        attackpower = 642,
+        rangeattacktime = 0,
+        unit_flags = 0,
+        ScriptName = 'generic_vehicleAI_toc5'
 WHERE `entry` IN (35637, 35633, 35768, 34658, 35636, 35638, 35635, 35640, 35641, 35634);
 
 DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35637;
@@ -45,36 +45,36 @@ INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`,
 
 
 UPDATE `creature_template` SET
-	faction_A = 14,
-	faction_H = 14,
-	npcflag = 0,
-	speed_walk = 1,
-	speed_run = 1.2,
-	VehicleId = 0,
-	spell1 = 0,
-	spell2 = 0,
-	spell3 = 0,
-	spell4 = 0
+        faction_A = 14,
+        faction_H = 14,
+        npcflag = 0,
+        speed_walk = 1,
+        speed_run = 1.2,
+        VehicleId = 0,
+        spell1 = 0,
+        spell2 = 0,
+        spell3 = 0,
+        spell4 = 0
 WHERE `entry` IN (35572, 35569, 35571, 35570, 35617, 34705, 34702, 34701, 34657, 34703);
 
 UPDATE `creature_template` SET
-	faction_A = 14,
-	faction_H = 14,
-	npcflag = 0,
-	speed_walk = 1,
-	speed_run = 1.4,
-	mindmg = 422,
-	maxdmg = 586,
-	attackpower = 642,
-	scriptName = 'generic_vehicleAI_toc5',
-	spell1 =0,
-	spell2 = 0,
-	spell3 = 0,
-	spell4 = 0,
-	spell5 = 0,
-	spell6 = 0,
-	spell7 = 0,
-	rangeattacktime = 0
+        faction_A = 14,
+        faction_H = 14,
+        npcflag = 0,
+        speed_walk = 1,
+        speed_run = 1.4,
+        mindmg = 422,
+        maxdmg = 586,
+        attackpower = 642,
+        scriptName = 'generic_vehicleAI_toc5',
+        spell1 =0,
+        spell2 = 0,
+        spell3 = 0,
+        spell4 = 0,
+        spell5 = 0,
+        spell6 = 0,
+        spell7 = 0,
+        rangeattacktime = 0
 WHERE `entry` IN (33319, 33318, 33217, 33317, 33316, 33324, 33322, 33320, 33323, 33321);
 
 DELETE FROM `vehicle_template_accessory` WHERE `entry` = 33317;
@@ -119,27 +119,27 @@ DELETE FROM `creature_template_addon` WHERE `entry` = 35328;
 DELETE FROM `creature_template_addon` WHERE `entry` = 35330;
 
 UPDATE `creature_template` SET
-	faction_A = 14,
-	faction_H = 14,
-	unit_flags = 33554562,
-	type_flags = 0,
-	spell1 = 0,
-	AIName = '',
-	ScriptName = ''
+        faction_A = 14,
+        faction_H = 14,
+        unit_flags = 33554562,
+        type_flags = 0,
+        spell1 = 0,
+        AIName = '',
+        ScriptName = ''
 WHERE `entry` IN (35331, 35325, 35332, 35326, 35314, 35327, 35323, 35329, 35328, 35330);
 
 UPDATE `creature_template` SET
-	IconName = 'vehichleCursor',
-	faction_A = 35,
-	faction_H = 35,
-	npcflag = 16777216,
-	speed_walk = 1,
-	speed_run = 1.4,
-	unit_flags = 0,
-	spell1 = 68505,
-	spell2 = 62575,
-	spell3 = 63010,
-	spell4 = 66482
+        IconName = 'vehichleCursor',
+        faction_A = 35,
+        faction_H = 35,
+        npcflag = 16777216,
+        speed_walk = 1,
+        speed_run = 1.4,
+        unit_flags = 0,
+        spell1 = 68505,
+        spell2 = 62575,
+        spell3 = 63010,
+        spell4 = 66482
 WHERE `entry` IN (35644, 36558);
 
 DELETE FROM `npc_spellclick_spells` WHERE `npc_entry` = 36558;
@@ -150,46 +150,51 @@ INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `quest_start`, `qu
 
 
 UPDATE `creature_template` SET
-	faction_A = 14,
-	faction_H = 14,
-	spell1 = 0,
-	spell2 = 0,
-	spell3 = 0,
-	spell4 = 0
+        faction_A = 14,
+        faction_H = 14,
+        spell1 = 0,
+        spell2 = 0,
+        spell3 = 0,
+        spell4 = 0
 WHERE `entry` IN (35309, 35305, 35307);
 
 UPDATE `creature_template` SET
-	faction_A = 14,
-	faction_H = 14,
-	spell1 = 0,
-	spell2 = 0,
-	spell3 = 0,
-	spell4 = 0
+        faction_A = 14,
+        faction_H = 14,
+        spell1 = 0,
+        spell2 = 0,
+        spell3 = 0,
+        spell4 = 0
 WHERE `entry` IN (35119, 34928);
 
 DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35491;
 INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35491, 35451, 0, 0, 'Death Knight', 6, 30000);
 
 UPDATE `creature_template` SET
-	minlevel = 82,
-	maxlevel = 82,
-	exp = 2,
-	faction_A = 14,
-	faction_H = 14,
-	npcflag = 0,
-	speed_walk = 1,
-	speed_run = 1.2,
-	scale = 1,
-	rank = 1,
-	mindmg = 488,
-	maxdmg = 642,
-	attackpower = 782,
-	dmg_multiplier = 15,
-	rangeattacktime = 0,
-	spell1 = 0,
-	spell2 = 0,
-	spell3 = 0,
-	spell4 = 0,
-	ScriptName = 'npc_memory',
-	mechanic_immune_mask = 803160063
+        minlevel = 82,
+        maxlevel = 82,
+        exp = 2,
+        faction_A = 14,
+        faction_H = 14,
+        npcflag = 0,
+        speed_walk = 1,
+        speed_run = 1.2,
+        scale = 1,
+        rank = 1,
+        mindmg = 488,
+        maxdmg = 642,
+        attackpower = 782,
+        dmg_multiplier = 15,
+        rangeattacktime = 0,
+        spell1 = 0,
+        spell2 = 0,
+        spell3 = 0,
+        spell4 = 0,
+        ScriptName = 'npc_memory',
+        mechanic_immune_mask = 803160063
 WHERE `entry` IN (34942, 35028, 35029, 35030, 35031, 35032, 35033, 35034, 35036, 35037, 35038, 35039, 35040, 35041, 35042, 35043, 35044, 35045, 35046, 35047, 35048, 35049, 35050, 35051, 35052);
+
+UPDATE `creature_template` SET
+        `faction_A` = 14,
+        `faction_H` = 14
+WHERE `entry` = 35517;
