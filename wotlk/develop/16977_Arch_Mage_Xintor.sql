@@ -19,7 +19,7 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@ENTRY, 0, 7, 0, 9, 1, 100, 0, 5, 15, 500, 500, 21, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Prevent Combat Movement at 15 Yards (Phase 1)'),
 (@ENTRY, 0, 8, 0, 9, 1, 100, 0, 0, 5, 500, 500, 21, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Start Combat Movement Below 5 Yards'),
 (@ENTRY, 0, 9, 0, 3, 2, 100, 0, 30, 100, 500, 500, 22, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Set Phase 1 when Mana is above 30% (Phase 2)'),
-(@ENTRY, 0, 10, 0, 0, 0, 50, 0, 6000, 8000, 9000, 12000, 11, 15736, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Cast Arcane Missiles'),
+(@ENTRY, 0, 10, 0, 0, 1, 50, 0, 6000, 8000, 9000, 12000, 11, 15736, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Cast Arcane Missiles'),
 (@ENTRY, 0, 11, 12, 2, 0, 100, 1, 0, 50, 0, 0, 11, 33245, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Cast Ice Barrier When Below 50% HP'),
 (@ENTRY, 0, 12, 0, 61, 0, 100, 0, 0, 0, 0, 0, 11, 29458, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Cast Blizzard When Below 50% HP'),
 (@ENTRY, 0, 13, 0, 2, 0, 100, 1, 0, 15, 0, 0, 22, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Set Phase 3 at 15% HP'),
