@@ -31,3 +31,8 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 DELETE FROM `creature_text` WHERE `entry` = @ENTRY;
 INSERT INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `language`, `probability`, `emote`, `duration`, `sound`, `comment`) VALUES
 (@ENTRY, 0, 0, '%s attempts to run away in fear!', 16, 0, 0, 0, 0, 0, 'Arch Mage Xintor - Emote at 15% HP (Phase 3)');
+
+/*
+russian:
+        %s бежит прочь в страхе!
+*/
