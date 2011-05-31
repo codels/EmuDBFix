@@ -198,3 +198,12 @@ UPDATE `creature_template` SET
         `faction_A` = 14,
         `faction_H` = 14
 WHERE `entry` = 35517;
+
+-- TDB!!!
+-- 195648
+UPDATE `gameobject` SET `state` = 1 WHERE `id` = 195648;
+-- 195649
+UPDATE `gameobject` SET `state` = 1 WHERE `guid` = 195649;
+-- 195647
+UPDATE `gameobject` SET `state` = 1 WHERE `guid` = 195647;
+DELETE FROM `gameobject` WHERE `guid` = 150081; -- double
