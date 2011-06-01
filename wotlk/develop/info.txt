@@ -1,34 +1,6 @@
-Start custom GUID:
-Creature: 400000
-CreatureTemplate: 100000
-GameEvent: 90
-Gameobject: 300000
-GameobjectScripts: 100000
-Waypoints: 3000000
-WaypointData: 3000000
-WaypointScripts: 3000000
+Start project GUID:
+Gameobject: 200000
+
 
 Uninstall:
-DELETE FROM `creature` WHERE `guid` >= 400000;
-DELETE FROM `creature_addon` WHERE `guid` >= 400000;
-DELETE FROM `creature_template` WHERE `guid` >= 100000;
-DELETE FROM `creature_template_addon` WHERE `guid` >= 100000;
-DELETE FROM `game_event` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_arena_seasons` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_battleground_holiday` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_condition` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_creature` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_creature_quest` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_gameobject` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_gameobject_quest` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_model_equip` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_npc_vendor` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_npcflag` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_pool` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_prerequisite` WHERE `eventEntry` >= 90;
-DELETE FROM `game_event_quest_condition` WHERE `eventEntry` >= 90;
-DELETE FROM `gameobject` WHERE `guid` >= 300000;
-DELETE FROM `gameobject_scripts` WHERE `id` >= 100000;
-DELETE FROM `waypoints` WHERE `id` >= 3000000;
-DELETE FROM `waypoint_data` WHERE `id` >= 3000000;
-DELETE FROM `waypoint_scripts` WHERE `id` >= 3000000;
+DELETE FROM `gameobject` WHERE `guid` >= 200000;
