@@ -1,1 +1,0 @@
-UPDATE `quest_template` SET `RewItemCount1` = 0 WHERE `RewItemId1` = 0;
