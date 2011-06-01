@@ -2,7 +2,6 @@ SET @ENTRY = 16977;
 UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = @ENTRY;
 
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @ENTRY;
-DELETE FROM `creature_ai_texts` WHERE `entry` = -47;
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @ENTRY AND `source_type` = 0;
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`,
