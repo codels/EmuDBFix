@@ -1,6 +1,8 @@
 Start project GUID:
 Gameobject: 200000
 
+Used:
+Gameobject: 200000 (id: 192060)
 
 Uninstall:
 DELETE FROM `gameobject` WHERE `guid` >= 200000;
