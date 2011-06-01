@@ -5,8 +5,8 @@ SET @EVENT = 15014;
 UPDATE `gameobject_template` SET `AIName` = 'SmartGameObjectAI' WHERE `entry` = @GO;
 
 DELETE FROM `gossip_menu_option` WHERE `menu_id` = @GOSSIP;
-INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`) VALUES
-(@GOSSIP, 0, 0, '<Call forth Terrok.>', 1, 1, 1);
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`) VALUES
+(@GOSSIP, 0, 0, '<Call forth Terrok.>', 1, 1);
 
 DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` = @GOSSIP;
 INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc8`) VALUES
