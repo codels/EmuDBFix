@@ -1,43 +1,35 @@
-UPDATE `creature_template` SET
-        `gossip_menu_id` = 9875,
-        `npcflag` = 1,
-        `unit_flags` = 256,
-        `AIName` = 'SmartAI'
-WHERE `entry` = 30162;
+SET @NPC = 30162;
+SET @GOSSIP = 9875;
+UPDATE `creature_template` SET `gossip_menu_id` = @GOSSIP, `npcflag` = 1, `unit_flags` = 256, `AIName` = 'SmartAI' WHERE `entry` = @NPC;
 
-DELETE FROM `gossip_menu` WHERE `entry` = 9875;
+DELETE FROM `gossip_menu` WHERE `entry` = @GOSSIP;
 INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES
-(9875, 13694),
-(9875, 13695);
+(@GOSSIP, 13694),
+(@GOSSIP, 13695);
 
-DELETE FROM `gossip_menu_option` WHERE `menu_id` = 9875;
-INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`,
-`action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`) VALUES
-(9875, 0, 0, 'Sorry, Tinky, but I can\'t afford you as a distraction while I\'m doing what needs to be done here.', 1, 1, 0, 0, 0, 0, 0, NULL);
+DELETE FROM `gossip_menu_option` WHERE `menu_id` = @GOSSIP;
+INSERT INTO `gossip_menu_option` (`menu_id`, `option_text`, `option_id`, `npc_option_npcflag`) VALUES
+(@GOSSIP, 'Sorry, Tinky, but I can\'t afford you as a distraction while I\'m doing what needs to be done here.', 1, 1);
 
-DELETE FROM `creature_text` WHERE `entry` = 30162;
-INSERT INTO `creature_text` (`entry`, `groupid`, `id`, `text`, `type`, `language`, `probability`, `emote`, `duration`,
-`sound`, `comment`) VALUES
-(30162, 0, 0, 'Grrrrrrrr! I\'ll kneecap ya!', 0, 0, 0, 0, 0, 0, ''),
-(30162, 1, 0, 'YOU\'RE NO FUN!', 0, 0, 0, 0, 0, 0, ''),
-(30162, 2, 0, 'WHEE!', 0, 0, 0, 0, 0, 0, '');
+DELETE FROM `creature_text` WHERE `entry` = @NPC;
+INSERT INTO `creature_text` (`entry`, `groupid`, `text`, `comment`) VALUES
+(@NPC, 0, 'Grrrrrrrr! I\'ll kneecap ya!', ''),
+(@NPC, 1, 'YOU\'RE NO FUN!', ''),
+(@NPC, 2, 'WHEE!', '');
 
-DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 30162;
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
 
-DELETE FROM `smart_scripts` WHERE `entryorguid` = 30162 AND `source_type` = 0;
-INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`,
-`event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`,
-`action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`,
-`target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
-(30162, 0, 0, 1, 62, 0, 100, 0, 9875, 0, 0, 0, 2, 14, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 1, 0, 61, 0, 100, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 2, 0, 4, 0, 100, 0, 0, 0, 0, 0, 22, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 3, 0, 7, 0, 100, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 4, 0, 7, 0, 100, 0, 0, 0, 0, 0, 22, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 5, 6, 2, 1, 100, 0, 0, 15, 0, 0, 33, 30162, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 6, 7, 61, 1, 100, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 7, 0, 61, 1, 100, 0, 0, 0, 0, 0, 22, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 8, 0, 0, 2, 100, 0, 500, 500, 1000, 1000, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 9, 0, 0, 1, 100, 0, 1000, 1500, 5000, 7000, 11, 61552, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 10, 11, 0, 1, 100, 0, 1600, 2000, 3000, 4000, 11, 37666, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, ''),
-(30162, 0, 11, 0, 61, 0, 100, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+INSERT INTO `smart_scripts` (`entryorguid`, `id`, `link`, `event_type`, `event_phase_mask`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `target_type`, `comment`) VALUES 
+(@NPC, 0, 1, 62, 0, 0, @GOSSIP, 0, 0, 0, 2, 14, 1, ''),
+(@NPC, 1, 0, 61, 0, 0, 0, 0, 0, 0, 1, 0, 0, ''),
+(@NPC, 2, 0, 4, 0, 0, 0, 0, 0, 0, 22, 1, 0, ''),
+(@NPC, 3, 0, 7, 0, 0, 0, 0, 0, 0, 2, 0, 1, ''),
+(@NPC, 4, 0, 7, 0, 0, 0, 0, 0, 0, 22, 1, 0, ''),
+(@NPC, 5, 6, 2, 1, 0, 0, 15, 0, 0, 33, 30162, 2, ''),
+(@NPC, 6, 7, 61, 1, 0, 0, 0, 0, 0, 1, 1, 0, ''),
+(@NPC, 7, 0, 61, 1, 0, 0, 0, 0, 0, 22, 2, 0, ''),
+(@NPC, 8, 0, 0, 2, 0, 500, 500, 1000, 1000, 24, 0, 0, ''),
+(@NPC, 9, 0, 0, 1, 0, 1000, 1500, 5000, 7000, 11, 61552, 2, ''),
+(@NPC, 10, 11, 0, 1, 0, 1600, 2000, 3000, 4000, 11, 37666, 2, ''),
+(@NPC, 11, 0, 61, 0, 0, 0, 0, 0, 0, 1, 2, 0, '');

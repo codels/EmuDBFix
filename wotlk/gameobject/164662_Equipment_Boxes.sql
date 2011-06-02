@@ -1,8 +1,7 @@
--- 164662 ytdb loot
-UPDATE `gameobject_template` SET
-	`data1` = 10984
-WHERE `entry` = 164662;
+SET @GO = 164662;
+SET @LOOT = 10984;
+UPDATE `gameobject_template` SET `data1` = @LOOT WHERE `entry` = @GO;
 
-DELETE FROM `gameobject_loot_template` WHERE `entry` IN (164662, 10984);
-INSERT INTO `gameobject_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount`) VALUES
-(10984, 11127, -100, 1, 0, 1, 1);
+DELETE FROM `gameobject_loot_template` WHERE `entry` IN (@GO, @LOOT);
+INSERT INTO `gameobject_loot_template` (`entry`, `item`, `ChanceOrQuestChance`) VALUES
+(@LOOT, 11127, -100);

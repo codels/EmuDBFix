@@ -12,37 +12,18 @@ UPDATE `creature_template` SET
         ScriptName = 'generic_vehicleAI_toc5'
 WHERE `entry` IN (35637, 35633, 35768, 34658, 35636, 35638, 35635, 35640, 35641, 35634);
 
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35637;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35637, 34705, 0, 0, 'Marshal Jacob Alerius\' Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35633;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35633, 34702, 0, 0, 'Ambrose Boltspark\'s Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35768;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35768, 34701, 0, 0, 'Colosos\' Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 34658;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (34658, 34657, 0, 0, 'Jaelyne Evensong\'s Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35636;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35636, 34703, 0, 0, 'Lana Stouthammer\'s Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35638;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35638, 35572, 0, 0, 'Mokra the Skullcrusher\'s Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35635;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35635, 35569, 0, 0, 'Eressea Dawnsinger\'s Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35640;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35640, 35571, 0, 0, 'Runok Wildmane\'s Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35641;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35641, 35570, 0, 0, 'Zul\'tore\'s Mount', 6, 30000);
-
-DELETE FROM `vehicle_template_accessory` WHERE `entry` = 35634;
-INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES (35634, 35617, 0, 0, 'Deathstalker Visceri\'s Mount', 6, 30000);
-
-
+DELETE FROM `vehicle_template_accessory` WHERE `entry` IN (35637, 35633, 35768, 34658, 35636, 35638, 35635, 35640, 35641, 35634);
+INSERT INTO `vehicle_template_accessory` (`entry`, `accessory_entry`, `seat_id`, `minion`, `description`, `summontype`, `summontimer`) VALUES
+(35637, 34705, 0, 0, 'Marshal Jacob Alerius\' Mount', 6, 30000),
+(35633, 34702, 0, 0, 'Ambrose Boltspark\'s Mount', 6, 30000),
+(35768, 34701, 0, 0, 'Colosos\' Mount', 6, 30000),
+(34658, 34657, 0, 0, 'Jaelyne Evensong\'s Mount', 6, 30000),
+(35636, 34703, 0, 0, 'Lana Stouthammer\'s Mount', 6, 30000),
+(35638, 35572, 0, 0, 'Mokra the Skullcrusher\'s Mount', 6, 30000),
+(35635, 35569, 0, 0, 'Eressea Dawnsinger\'s Mount', 6, 30000),
+(35640, 35571, 0, 0, 'Runok Wildmane\'s Mount', 6, 30000),
+(35641, 35570, 0, 0, 'Zul\'tore\'s Mount', 6, 30000),
+(35634, 35617, 0, 0, 'Deathstalker Visceri\'s Mount', 6, 30000);
 
 UPDATE `creature_template` SET
         faction_A = 14,

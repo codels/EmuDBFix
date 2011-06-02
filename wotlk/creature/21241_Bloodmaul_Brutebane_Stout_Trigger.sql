@@ -1,6 +1,3 @@
-UPDATE `creature_template` SET
-        `AIName` = '',
-        `ScriptName` = 'npc_bloodmaul_brutebane'
-WHERE `entry` = 21241;
-
-DELETE FROM `creature_ai_scripts` WHERE `creature_id` = 21241;
+SET @NPC = 21241;
+UPDATE `creature_template` SET `AIName` = '', `ScriptName` = 'npc_bloodmaul_brutebane' WHERE `entry` = @NPC;
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;

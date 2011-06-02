@@ -1,3 +1,1 @@
-UPDATE `creature_template` SET
-        `InhabitType` = 5
-WHERE `entry` = 25711;
+UPDATE `creature_template` SET `InhabitType` = 5 WHERE `entry` = 25711;
