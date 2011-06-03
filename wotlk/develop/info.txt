@@ -7,6 +7,10 @@ Gameobject:
         200000 (id: 192060)
 Creature:
         300000 - 300008(id: 39420)
+	300009(id: 37221)
+	300010(id: 37223)
+	300011(id: 38112)
+	300012(id: 38113)
 
 Uninstall:
 DELETE FROM `gameobject` WHERE `guid` >= 200000;
