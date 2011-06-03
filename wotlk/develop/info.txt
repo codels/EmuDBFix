@@ -1,8 +1,13 @@
 Start project GUID:
 Gameobject: 200000
+Creature: 300000
 
 Used:
-Gameobject: 200000 (id: 192060)
+Gameobject:
+        200000 (id: 192060)
+Creature:
+        300000 - 300008(id: 39420)
 
 Uninstall:
 DELETE FROM `gameobject` WHERE `guid` >= 200000;
+DELETE FROM `creature` WHERE `guid` >= 300000;
