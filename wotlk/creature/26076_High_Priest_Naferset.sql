@@ -17,5 +17,5 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@NPC, 0, 7, 0, 35, 0, 100, 0, 0, 0, 0, 0, 23, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, '');
 
 DELETE FROM `creature_text` WHERE `entry` = @NPC;
-INSERT INTO `creature_text` (`entry`, `text`, `type`, `probability`, `comment`) VALUES
-(@NPC, 'What is the meaning of this? I have not yet finished my feast!', 1, 100, '');
+INSERT INTO `creature_text` (`entry`, `text`, `type`, `comment`) VALUES
+(@NPC, 'What is the meaning of this? I have not yet finished my feast!', 14, 'High Priest Naferset');
