@@ -27,6 +27,6 @@ INSERT INTO `smart_scripts` (`entryorguid`, `id`, `link`, `event_type`, `event_p
 (@NPC, 11, 0, 7, 0, 0, 0, 0, 0, 0, 22, 1, 0, 'set phase 1 on evade');
 
 DELETE FROM `creature_text` WHERE `entry` = @NPC;
-INSERT INTO `creature_text` (`entry`, `groupid`, `text`, `comment`) VALUES
-(@NPC, 0, 'You dare to touch ME? You won\'t keep me from proving myself to the Lich King!', ''),
-(@NPC, 1, 'Wait, wait... I surrender! Please, no more! I\'ll leave!', '');
+INSERT INTO `creature_text` (`entry`, `groupid`, `text`, `type`, `comment`) VALUES
+(@NPC, 0, 'You dare to touch ME? You won\'t keep me from proving myself to the Lich King!', 14, 'Efrem the Faithful'),
+(@NPC, 1, 'Wait, wait... I surrender! Please, no more! I\'ll leave!', 14, 'Efrem the Faithful');
