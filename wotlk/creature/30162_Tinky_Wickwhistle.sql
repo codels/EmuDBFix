@@ -12,10 +12,10 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `option_text`, `option_id`, `npc_op
 (@GOSSIP, 'Sorry, Tinky, but I can\'t afford you as a distraction while I\'m doing what needs to be done here.', 1, 1);
 
 DELETE FROM `creature_text` WHERE `entry` = @NPC;
-INSERT INTO `creature_text` (`entry`, `groupid`, `text`, `comment`) VALUES
-(@NPC, 0, 'Grrrrrrrr! I\'ll kneecap ya!', ''),
-(@NPC, 1, 'YOU\'RE NO FUN!', ''),
-(@NPC, 2, 'WHEE!', '');
+INSERT INTO `creature_text` (`entry`, `groupid`, `text`, `type`, `comment`) VALUES
+(@NPC, 0, 'Grrrrrrrr! I\'ll kneecap ya!', 14, 'Tinky Wickwhistle'),
+(@NPC, 1, 'YOU\'RE NO FUN!', 14, 'Tinky Wickwhistle'),
+(@NPC, 2, 'WHEE!', 14, 'Tinky Wickwhistle');
 
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
 

@@ -11,10 +11,10 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `option_text`, `option_id`, `npc_op
 (@GOSSIP, 'I have bad news for you Onu\'zun: I\'m gonna have to cut short your dreams!', 1, 1);
 
 DELETE FROM `creature_text` WHERE `entry` = @NPC;
-INSERT INTO `creature_text` (`entry`, `groupid`, `text`, `comment`) VALUES
-(@NPC, 0, 'Onu\'zun gonna kill you dead!', ''),
-(@NPC, 1, 'Onu\'zun is defeated by the ugliest person ever!', ''),
-(@NPC, 2, 'Onu\'zun go now. You\'ll miss me.', '');
+INSERT INTO `creature_text` (`entry`, `groupid`, `text`, `type`, `comment`) VALUES
+(@NPC, 0, 'Onu\'zun gonna kill you dead!', 12, 'Onu\'zun'),
+(@NPC, 1, 'Onu\'zun is defeated by the ugliest person ever!', 12, 'Onu\'zun'),
+(@NPC, 2, 'Onu\'zun go now. You\'ll miss me.', 12, 'Onu\'zun');
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
 INSERT INTO `smart_scripts` (`entryorguid`, `id`, `link`, `event_type`, `event_phase_mask`,
