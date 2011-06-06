@@ -9,13 +9,6 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (@GOSSIP, 2, 0, 'I need to find Goregek, you have to shackles?', 1, 1),
 (@GOSSIP, 3, 0, 'I need to find Zepik, you have to Hunting Horn?', 1, 1);
 
-DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` = @GOSSIP;
-INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc8`) VALUES
-(@GOSSIP, 0, 'Мне нужно найти Дажика, у тебя есть его мел?'),
-(@GOSSIP, 1, 'Мне нужно найти Дажика, у тебя есть его мел?'),
-(@GOSSIP, 2, 'Мне нужно найти Горегека, у тебя есть его кандалы?'),
-(@GOSSIP, 3, 'Мне нужно найти Зепика, у тебя есть его охотничий рог?');
-
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = @GOSSIP;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ElseGroup`, `ConditionTypeOrReference`,
 `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES 

@@ -9,10 +9,6 @@ DELETE FROM `gossip_menu_option` WHERE `menu_id` = @GOSSIP;
 INSERT INTO `gossip_menu_option` (`menu_id`, `option_text`, `option_id`, `npc_option_npcflag`) VALUES
 (@GOSSIP, 'Get in the Flying Machine.', 1, 1);
 
-DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` = @GOSSIP;
-INSERT INTO `locales_gossip_menu_option` (`menu_id`, `option_text_loc8`) VALUES
-(@GOSSIP, 'Забраться в ветролет.');
-
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = @GOSSIP;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ElseGroup`, `ConditionTypeOrReference`,
 `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES

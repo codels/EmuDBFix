@@ -29,8 +29,3 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 DELETE FROM `creature_text` WHERE `entry` = @NPC;
 INSERT INTO `creature_text` (`entry`, `text`, `type`, `comment`) VALUES
 (@NPC, '%s attempts to run away in fear!', 16, 'Arch Mage Xintor - Emote at 15% HP (Phase 3)');
-
-/*
-russian:
-        %s бежит прочь в страхе!
-*/

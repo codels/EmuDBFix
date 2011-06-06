@@ -12,6 +12,7 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@NPC, 0, 2, 0, 9, 0, 100, 0, 5, 30, 15000, 20000, 11, 35570, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'cast'),
 (@NPC, 0, 3, 0, 4, 0, 100, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'say');
 
+-- Need correct text
 DELETE FROM `creature_text` WHERE `entry` = @NPC;
 INSERT INTO `creature_text` (`entry`, `text`, `type`, `probability`, `emote`, `comment`) VALUES
-(@NPC, 'Твоя смерть близка!', 12, 100, 1, 'Dragonflayer Tribesman');
+(@NPC, 'Your death is close!', 12, 100, 1, 'Dragonflayer Tribesman');
