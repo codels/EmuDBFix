@@ -1,4 +1,3 @@
--- GUID For Project TrinityDBFix (max in TDB: 152115)
 SET @GUID = 200000;
 SET @GO = 192060;
 

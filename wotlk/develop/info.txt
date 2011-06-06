@@ -1,5 +1,5 @@
 Start project GUID:
-        Gameobject: 200000
+        Gameobject: 200000 (max in TDB: 152115)
         Creature: 300000
 
 Used:
