@@ -10,9 +10,3 @@ DELETE FROM `creature_text` WHERE `entry` = @NPC;
 INSERT INTO `creature_text` (`entry`, `id`, `text`, `type`, `comment`) VALUES
 (@NPC, 0, 'You no take candle!', 12, 'Kobold Vermin'),
 (@NPC, 1, 'Yiieeeee! Me run!', 12, 'Kobold Vermin');
-
-/*
-russian:
-        Не трогай свечу!
-        Айй! Моя бежать!
-*/

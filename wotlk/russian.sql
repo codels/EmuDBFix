@@ -216,3 +216,5 @@ UPDATE `script_texts` SET `content_loc8` = 'Ты от меня не отмахн
 
 UPDATE `creature_text` SET `text` = '%s бежит прочь в страхе!' WHERE `entry` = 16977;
 UPDATE `creature_text` SET `text` = 'Твоя смерть близка!' WHERE `entry` = 23651;
+UPDATE `creature_text` SET `text` = 'Не трогай свечу!' WHERE `entry` = 6 AND `id` = 0;
+UPDATE `creature_text` SET `text` = 'Айй! Моя бежать!' WHERE `entry` = 6 AND `id` = 1;
