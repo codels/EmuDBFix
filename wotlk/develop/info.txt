@@ -1,17 +1,21 @@
 Start project GUID:
-Gameobject: 200000
-Creature: 300000
+        Gameobject: 200000
+        Creature: 300000
 
 Used:
+<SOURCE>
+        <GUID>[ - GUID] : <ID>
+
 Gameobject:
-        200000 (id: 192060)
+        200000 : 192060
+
 Creature:
-        300000 - 300008(id: 39420)
-	300009(id: 37221)
-	300010(id: 37223)
-	300011(id: 38112)
-	300012(id: 38113)
+        300000 - 300008 : 39420
+        300009 : 37221
+        300010 : 37223
+        300011 : 38112
+        300012 : 38113
 
 Uninstall:
-DELETE FROM `gameobject` WHERE `guid` >= 200000;
-DELETE FROM `creature` WHERE `guid` >= 300000;
+        DELETE FROM `gameobject` WHERE `guid` >= 200000;
+        DELETE FROM `creature` WHERE `guid` >= 300000;
