@@ -1,13 +1,27 @@
 /*########################################
 ###           `trinity_string`
 ########################################*/
+
+UPDATE `trinity_string` SET `content_loc8` = 'Вы должны выбрать персонажа или существо.' WHERE `entry` = 1;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы должны выбрать существо.' WHERE `entry` = 2;
+UPDATE `trinity_string` SET `content_loc8` = '[СЕРВЕР] %s' WHERE `entry` = 3;
+UPDATE `trinity_string` SET `content_loc8` = '|cffff0000[Событие]: %s|r' WHERE `entry` = 4;
+UPDATE `trinity_string` SET `content_loc8` = 'Нет справки для этой команды' WHERE `entry` = 5;
+UPDATE `trinity_string` SET `content_loc8` = 'Нет такой команды' WHERE `entry` = 6;
+UPDATE `trinity_string` SET `content_loc8` = 'Нет такой подкоманды' WHERE `entry` = 7;
+UPDATE `trinity_string` SET `content_loc8` = 'Команда %s имеет подкоманды:%s' WHERE `entry` = 8;
+UPDATE `trinity_string` SET `content_loc8` = 'Команды доступные Вам:' WHERE `entry` = 9;
+UPDATE `trinity_string` SET `content_loc8` = 'Неправильный синтаксис.' WHERE `entry` = 10;
+-- 11 - 601
+UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
+-- 603 - 606
 UPDATE `trinity_string` SET `content_loc8` = '$n роняет флаг Орды!' WHERE `entry` = 607;
 UPDATE `trinity_string` SET `content_loc8` = '$n роняет флаг Альянса!' WHERE `entry` = 608;
 UPDATE `trinity_string` SET `content_loc8` = '$n возвращает на базу флаг Альянса!' WHERE `entry` = 609;
 UPDATE `trinity_string` SET `content_loc8` = '$n возвращает на базу флаг Орды!' WHERE `entry` = 610;
-UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через 2 минуты!' WHERE `entry` IN (753, 754, 755, 1205, 1333, 10056);
-UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
 UPDATE `trinity_string` SET `content_loc8` = 'Недостаточно игроков. До завершения игры: %u мин.' WHERE `entry` = 750;
+UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через 2 минуты!' WHERE `entry` IN (753, 754, 755, 1205, 1333, 10056);
+
 /*########################################
 ###     `locales_gossip_menu_option`
 ########################################*/
