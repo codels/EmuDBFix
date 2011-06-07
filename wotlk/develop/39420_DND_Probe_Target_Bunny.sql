@@ -1,6 +1,6 @@
 SET @GUID = 300000;
 SET @NPC = 39420;
-UPDATE `creature_template` SET `flags_extra` = 128 WHERE `entry` = @NPC;
+UPDATE `creature_template` SET `flags_extra` = 0 WHERE `entry` = @NPC;
 
 DELETE FROM `creature` WHERE `guid` BETWEEN @GUID AND @GUID + 8 OR `id` = @NPC;
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`,
