@@ -12,7 +12,45 @@ UPDATE `trinity_string` SET `content_loc8` = 'Нет такой подкоман
 UPDATE `trinity_string` SET `content_loc8` = 'Команда %s имеет подкоманды:%s' WHERE `entry` = 8;
 UPDATE `trinity_string` SET `content_loc8` = 'Команды доступные Вам:' WHERE `entry` = 9;
 UPDATE `trinity_string` SET `content_loc8` = 'Неправильный синтаксис.' WHERE `entry` = 10;
--- 11 - 601
+UPDATE `trinity_string` SET `content_loc8` = 'Уровень вашей учетной записи: %i' WHERE `entry` = 11;
+UPDATE `trinity_string` SET `content_loc8` = 'Соеденений: %u (максимум: %u) Соеденений в очереди: %u (максимум: %u)' WHERE `entry` = 12;
+UPDATE `trinity_string` SET `content_loc8` = 'Сервер работает: %s' WHERE `entry` = 13;
+UPDATE `trinity_string` SET `content_loc8` = 'Игрок сохранен.' WHERE `entry` = 14;
+UPDATE `trinity_string` SET `content_loc8` = 'Все игроки сохранены.' WHERE `entry` = 15;
+UPDATE `trinity_string` SET `content_loc8` = 'На этом сервере есть следующие активные игровые мастера:' WHERE `entry` = 16;
+UPDATE `trinity_string` SET `content_loc8` = 'На этом сервере нет игровых мастеров вошедших в игру.' WHERE `entry` = 17;
+UPDATE `trinity_string` SET `content_loc8` = 'Не могу сделать это в полете.' WHERE `entry` = 18;
+UPDATE `trinity_string` SET `content_loc8` = 'Не могу сделать это на Полях битвы.' WHERE `entry` = 19;
+UPDATE `trinity_string` SET `content_loc8` = 'Цель летает, Вы не можете сделать этого.' WHERE `entry` = 20;
+UPDATE `trinity_string` SET `content_loc8` = '%s летает, команда не выполнена.' WHERE `entry` = 21;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете слезть с ездового животного, так как вы не на нем.' WHERE `entry` = 22;
+UPDATE `trinity_string` SET `content_loc8` = 'Не могу сделать это в бою.' WHERE `entry` = 23;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы недавно использовали это.' WHERE `entry` = 24;
+UPDATE `trinity_string` SET `content_loc8` = 'Пароль не изменен (неизвестная ошибка)!' WHERE `entry` = 25;
+UPDATE `trinity_string` SET `content_loc8` = 'Пароль изменен' WHERE `entry` = 26;
+UPDATE `trinity_string` SET `content_loc8` = 'Старый пароль неверный' WHERE `entry` = 27;
+UPDATE `trinity_string` SET `content_loc8` = 'Ваша учетная запись заблокирована.' WHERE `entry` = 28;
+UPDATE `trinity_string` SET `content_loc8` = 'Ваша учетная запись разблокирована.' WHERE `entry` = 29;
+UPDATE `trinity_string` SET `content_loc8` = ', ранг ' WHERE `entry` = 30;
+UPDATE `trinity_string` SET `content_loc8` = ' [известно]' WHERE `entry` = 31;
+UPDATE `trinity_string` SET `content_loc8` = ' [обучение]' WHERE `entry` = 32;
+UPDATE `trinity_string` SET `content_loc8` = ' [пассивный]' WHERE `entry` = 33;
+UPDATE `trinity_string` SET `content_loc8` = ' [талант]' WHERE `entry` = 34;
+UPDATE `trinity_string` SET `content_loc8` = ' [активный]' WHERE `entry` = 35;
+UPDATE `trinity_string` SET `content_loc8` = ' [завершено]' WHERE `entry` = 36;
+UPDATE `trinity_string` SET `content_loc8` = ' (не в сети)' WHERE `entry` = 37;
+UPDATE `trinity_string` SET `content_loc8` = 'вкл.' WHERE `entry` = 38;
+UPDATE `trinity_string` SET `content_loc8` = 'откл.' WHERE `entry` = 39;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы: %s' WHERE `entry` = 40;
+UPDATE `trinity_string` SET `content_loc8` = 'видимый' WHERE `entry` = 41;
+UPDATE `trinity_string` SET `content_loc8` = 'невидимый' WHERE `entry` = 42;
+UPDATE `trinity_string` SET `content_loc8` = 'сделано' WHERE `entry` = 43;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы' WHERE `entry` = 44;
+UPDATE `trinity_string` SET `content_loc8` = ' <неизвестный> ' WHERE `entry` = 45;
+UPDATE `trinity_string` SET `content_loc8` = '<ошибка>' WHERE `entry` = 46;
+UPDATE `trinity_string` SET `content_loc8` = '<не существующий персонаж>' WHERE `entry` = 47;
+UPDATE `trinity_string` SET `content_loc8` = 'НЕИЗВЕСТНЫЙ' WHERE `entry` = 48;
+-- 49 - 601
 UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
 -- 603 - 606
 UPDATE `trinity_string` SET `content_loc8` = '$n роняет флаг Орды!' WHERE `entry` = 607;
