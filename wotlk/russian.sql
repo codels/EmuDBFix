@@ -20,8 +20,8 @@ UPDATE `trinity_string` SET `content_loc8` = 'Все игроки сохране
 UPDATE `trinity_string` SET `content_loc8` = 'На этом сервере есть следующие активные игровые мастера:' WHERE `entry` = 16;
 UPDATE `trinity_string` SET `content_loc8` = 'На этом сервере нет игровых мастеров вошедших в игру.' WHERE `entry` = 17;
 UPDATE `trinity_string` SET `content_loc8` = 'Не могу сделать это в полете.' WHERE `entry` = 18;
-UPDATE `trinity_string` SET `content_loc8` = 'Не могу сделать это на Полях битвы.' WHERE `entry` = 19;
-UPDATE `trinity_string` SET `content_loc8` = 'Цель летает, Вы не можете сделать этого.' WHERE `entry` = 20;
+UPDATE `trinity_string` SET `content_loc8` = 'Не могу сделать это на Полях битвы.' WHERE `entry` = 19; -- Не используется ядром
+UPDATE `trinity_string` SET `content_loc8` = 'Цель летает, Вы не можете сделать этого.' WHERE `entry` = 20; -- Не используется ядром
 UPDATE `trinity_string` SET `content_loc8` = '%s летает, команда не выполнена.' WHERE `entry` = 21;
 UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете слезть с ездового животного, так как вы не на нем.' WHERE `entry` = 22;
 UPDATE `trinity_string` SET `content_loc8` = 'Не могу сделать это в бою.' WHERE `entry` = 23;
@@ -50,7 +50,70 @@ UPDATE `trinity_string` SET `content_loc8` = ' <неизвестный> ' WHERE 
 UPDATE `trinity_string` SET `content_loc8` = '<ошибка>' WHERE `entry` = 46;
 UPDATE `trinity_string` SET `content_loc8` = '<не существующий персонаж>' WHERE `entry` = 47;
 UPDATE `trinity_string` SET `content_loc8` = 'НЕИЗВЕСТНЫЙ' WHERE `entry` = 48;
--- 49 - 601
+UPDATE `trinity_string` SET `content_loc8` = 'Необходимо быть не менее %u уровня, чтобы войти.' WHERE `entry` = 49;
+UPDATE `trinity_string` SET `content_loc8` = 'Необходимо быть не менее %u уровня и иметь предмет %s чтобы войти.' WHERE `entry` = 50;
+UPDATE `trinity_string` SET `content_loc8` = 'Привет! Готовы к обучению?' WHERE `entry` = 51;
+UPDATE `trinity_string` SET `content_loc8` = 'Неверное количество (%u) для предмета %u' WHERE `entry` = 52;
+UPDATE `trinity_string` SET `content_loc8` = 'У почты не может быть больше %u ячеек для предметов' WHERE `entry` = 53;
+UPDATE `trinity_string` SET `content_loc8` = 'Новые пароли не соответствуют' WHERE `entry` = 54;
+UPDATE `trinity_string` SET `content_loc8` = 'Ваш пароль не может быть длиннее 16 символов (предел клиента), пароль не изменен!' WHERE `entry` = 55;
+UPDATE `trinity_string` SET `content_loc8` = 'Текущее сообщение дня:\r\n%s' WHERE `entry` = 56;
+UPDATE `trinity_string` SET `content_loc8` = 'Используемая База Данных: %s' WHERE `entry` = 57;
+UPDATE `trinity_string` SET `content_loc8` = 'Используемая библиотека скриптов: %s' WHERE `entry` = 58;
+UPDATE `trinity_string` SET `content_loc8` = 'Использование существом EventAI: %s' WHERE `entry` = 59;
+UPDATE `trinity_string` SET `content_loc8` = 'Игроков в игре: %u (максимум: %u)' WHERE `entry` = 60;
+UPDATE `trinity_string` SET `content_loc8` = 'Разрешенная версия дополнения игры %u.' WHERE `entry` = 61;
+UPDATE `trinity_string` SET `content_loc8` = 'Один или несколько параметров имеют неверное значение' WHERE `entry` = 62;
+UPDATE `trinity_string` SET `content_loc8` = 'Неверная цель' WHERE `entry` = 63; -- Не используется ядром
+UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете использовать этот предмет здесь.' WHERE `entry` = 64; -- Не используется ядром
+-- 65 - 99 (Не используется ядром)
+UPDATE `trinity_string` SET `content_loc8` = 'Глобальное уведомление: ' WHERE `entry` = 100;
+UPDATE `trinity_string` SET `content_loc8` = 'Карта: %u (%s) Зона: %u (%s) Область: %u (%s) Фаза: %u\r\nX: %f Y: %f Z: %f Ориентация: %f\r\nсетка[%u,%u]ячейка[%u,%u] №Подземелья: %u\r\nXЗоны: %f YЗоны: %f\r\nZОснования: %f ZПола: %f имеете данные высот (Карта: %u КартаВ: %u)' WHERE `entry` = 101;
+UPDATE `trinity_string` SET `content_loc8` = '%s уже телепортируется.' WHERE `entry` = 102;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы можете призвать игрока в ваше подземелье только если он в Вашей группе, а Вы лидер группы.' WHERE `entry` = 103;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете отправиться к игроку в подземелье, потому что Вы сейчас в группе.' WHERE `entry` = 104;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете отправиться к игроку в подземелье, не находясь в его группе (только в режиме игрового мастера).' WHERE `entry` = 105;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете отправиться к игроку %s из одной копии подземелья в другую.' WHERE `entry` = 106;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете призвать игрока %s из одной копии подземелья в другую.' WHERE `entry` = 107;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы призываете %s%s.' WHERE `entry` = 108;
+UPDATE `trinity_string` SET `content_loc8` = 'Вас призывает %s.' WHERE `entry` = 109;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы телепортируйте %s%s к %s.' WHERE `entry` = 110;
+UPDATE `trinity_string` SET `content_loc8` = 'Вас телепортирует %s.' WHERE `entry` = 111;
+UPDATE `trinity_string` SET `content_loc8` = 'Игрока (%s) не существует.' WHERE `entry` = 112;
+UPDATE `trinity_string` SET `content_loc8` = 'Появление в местоположении %s.' WHERE `entry` = 113;
+UPDATE `trinity_string` SET `content_loc8` = '%s появляется около вас.' WHERE `entry` = 114;
+UPDATE `trinity_string` SET `content_loc8` = 'Неверные значения.' WHERE `entry` = 115;
+UPDATE `trinity_string` SET `content_loc8` = 'Персонаж не выбран.' WHERE `entry` = 116;
+UPDATE `trinity_string` SET `content_loc8` = '%s не в группе.' WHERE `entry` = 117;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили запас здоровья %s до %i/%i.' WHERE `entry` = 118;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил запас вашего здоровья до %i/%i.' WHERE `entry` = 119;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили запас манны %s до %i/%i.' WHERE `entry` = 120;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил запас вашей манны до %i/%i.' WHERE `entry` = 121;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили запас энергии %s до %i/%i.' WHERE `entry` = 122;
+UPDATE `trinity_string` SET `content_loc8` = 'Текущая энергия: %u' WHERE `entry` = 124;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили запас ярости %s до %i/%i.' WHERE `entry` = 125;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил запас вашей ярости до %i/%i.' WHERE `entry` = 126;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили уровень %s до %i.' WHERE `entry` = 127;
+UPDATE `trinity_string` SET `content_loc8` = 'GUID %i, фракция %i, флаги %i, нипфлаги %i, DY флаг %i' WHERE `entry` = 128;
+UPDATE `trinity_string` SET `content_loc8` = 'Неверная фракция: %u (не найдено в factiontemplate.dbc).' WHERE `entry` = 129;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы изменили GUID=%i Фракцию на %i, флаги на %i, нипфлаг на %i, DY флаг на %i.' WHERE `entry` = 130;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы изменили spellflatid=%i, знач= %i, метка =%i на %s.' WHERE `entry` = 131;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил Ваш spellflatid=%i, знач= %i, mark =%i.' WHERE `entry` = 132;
+UPDATE `trinity_string` SET `content_loc8` = '%s получил сейчас доступ ко всем маршрутным путям (до выхода из мира).' WHERE `entry` = 133;
+UPDATE `trinity_string` SET `content_loc8` = '%s больше не имеет доступа ко всем маршрутным путям (доступны только открытые).' WHERE `entry` = 134;
+UPDATE `trinity_string` SET `content_loc8` = '%s дал вам доступ ко всем маршрутным путям (до выхода из мира).' WHERE `entry` = 135;
+UPDATE `trinity_string` SET `content_loc8` = '%s убрал доступ ко всем маршрутным путям (доступны только открытые).' WHERE `entry` = 136;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили все скорости на %2.2f от нормальной у %s.' WHERE `entry` = 137;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил все ваши скорости на %2.2f от нормальной.' WHERE `entry` = 138;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили скорость передвижения на %2.2f от нормальной у %s.' WHERE `entry` = 139;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил вашу скорость передвижения на %2.2f от нормальной.' WHERE `entry` = 140;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили скорость плавания на %2.2f от нормальной у %s.' WHERE `entry` = 141;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил вашу скорость плавания на %2.2f от нормальной.' WHERE `entry` = 142;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установил скорость передвижения назад на %2.2f от нормальной у %s.' WHERE `entry` = 143;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил вашу скорость передвижения назад на  %2.2f от нормальной.' WHERE `entry` = 144;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили скорость полета на %2.2f от нормальной у %s.' WHERE `entry` = 145;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил вашу скорость полета на %2.2f от нормальной.' WHERE `entry` = 146;
+-- 147 - 601
 UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
 -- 603 - 606
 UPDATE `trinity_string` SET `content_loc8` = '$n роняет флаг Орды!' WHERE `entry` = 607;
@@ -64,17 +127,17 @@ UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется чер
 ###     `locales_gossip_menu_option`
 ########################################*/
 
-DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` IN (4461, 6647, 10371, 9741, 11211);
+DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` IN (4461, 6647, 9741, 10371, 11211);
 INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc8`, `box_text_loc8`) VALUES
 (4461, 0, 'Да. Так.', NULL),
 (6647, 0, 'Я хочу узнать больше об учении Света.', NULL),
 (6647, 1, 'Я хочу забыть свои таланты.', NULL),
 (6647, 2, 'Я хочу расспросить о двойной специализации.', NULL),
-(10371, 0, 'Купить двойную специализацию талантов.', 'Вы уверены что хотите купить двойную специализацию талантов?'),
 (9741, 0, 'Мне нужно найти Дажика, у тебя есть его мел?', NULL),
 (9741, 1, 'Мне нужно найти Дажика, у тебя есть его мел?', NULL),
 (9741, 2, 'Мне нужно найти Горегека, у тебя есть его кандалы?', NULL),
 (9741, 3, 'Мне нужно найти Зепика, у тебя есть его охотничий рог?', NULL),
+(10371, 0, 'Купить двойную специализацию талантов.', 'Вы уверены что хотите купить двойную специализацию талантов?'),
 (11211, 0, 'Забраться в ветролет.', NULL);
 
 /*########################################
@@ -91,21 +154,33 @@ INSERT INTO `locales_npc_text` (`entry`, `Text0_0_loc8`, `Text0_1_loc8`) VALUES
 ########################################*/
 
 UPDATE `creature_ai_texts` SET `content_loc8` = '% бежит прочь в страхе!' WHERE `entry` = -47;
+UPDATE `creature_ai_texts` SET `content_loc8` = 'Теперь, когда мы обладаем силой диких богов, горящей в нашей крови, никто, даже Король-лич, не сможет остановить нас!' WHERE `entry` = -480;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Я уничтожу Серебярный Авангард! Я сокрушу Плеть!' WHERE `entry` = -483;
 UPDATE `creature_ai_texts` SET `content_loc8` = 'Пьем до дна, братья мои!' WHERE `entry` = -485;
-UPDATE `creature_ai_texts` SET `content_loc8` = 'Теперь, когда мы обладаем силой диких богов, горящей в нашей крови, никто, даже Король-лич, не сможет остановить нас!' WHERE `entry` = -480;
 
 /*########################################
 ###           `script_texts`
 ########################################*/
 
-UPDATE `script_texts` SET `content_loc8` = 'Что? Этого не может быть!' WHERE `entry` = -1595091;
 UPDATE `script_texts` SET `content_loc8` = 'Я не позволю вам осквернить эти таинства!' WHERE `entry` = -1189019;
 UPDATE `script_texts` SET `content_loc8` = 'Горите в праведном огне!' WHERE `entry` = -1189020;
 UPDATE `script_texts` SET `content_loc8` = 'Ох, хорошо пошло!' WHERE `entry` = -1230000;
--- 'Еще эля! Дайте еще!'
-UPDATE `script_texts` SET `content_loc8` = 'Прочь, подлецы! Альтеракская долина достанется Альянсу!' WHERE `entry` = -1810023;
-UPDATE `script_texts` SET `content_loc8` = 'Эй вы, жалкие трусы из Северного Волка! Хотите драться – так идите ко мне!' WHERE `entry` = -1810024;
+UPDATE `script_texts` SET `content_loc8` = 'Ооо... добро пожаловать в мою гостиную.' WHERE `entry` = -1533000;
+UPDATE `script_texts` SET `content_loc8` = 'Посмотрим какие вы на вкус...' WHERE `entry` = -1533001;
+UPDATE `script_texts` SET `content_loc8` = 'Вам отсюда не выбраться.' WHERE `entry` = -1533002;
+UPDATE `script_texts` SET `content_loc8` = 'Бегите, бегите! Я люблю горячую кровь!' WHERE `entry` = -1533003;
+UPDATE `script_texts` SET `content_loc8` = 'Я слышу биение маленьких сердец. Да... теперь они бьются быстрей. Но скоро они остановятся.' WHERE `entry` = -1533004;
+UPDATE `script_texts` SET `content_loc8` = 'Куда идти ? Что делать ? Выбирайте, но все пути ведут к боли, и смерти.' WHERE `entry` = -1533005;
+UPDATE `script_texts` SET `content_loc8` = 'Кого мне съесть первым ? Сложный выбор... все они пахнут так вкусно.' WHERE `entry` = -1533006;
+UPDATE `script_texts` SET `content_loc8` = 'Подойдите ближе... лакомые кусочки. Я слишком долго мечтал о еде и крови.' WHERE `entry` = -1533007;
+UPDATE `script_texts` SET `content_loc8` = 'Шшш... скоро все будет кончено.' WHERE `entry` = -1533008;
+UPDATE `script_texts` SET `content_loc8` = 'Слава господину!' WHERE `entry` = -1533075;
+UPDATE `script_texts` SET `content_loc8` = 'Прощайся с жизнью!' WHERE `entry` = -1533076;
+UPDATE `script_texts` SET `content_loc8` = 'Смерть, чужакам!' WHERE `entry` = -1533077;
+UPDATE `script_texts` SET `content_loc8` = 'Встаньте, мои войны! Встаньте и сражайтесь вновь!' WHERE `entry` = -1533078;
+UPDATE `script_texts` SET `content_loc8` = 'Дело сделано!' WHERE `entry` = -1533079;
+UPDATE `script_texts` SET `content_loc8` = 'Этот вздох был для тебя последним!' WHERE `entry` = -1533080;
+UPDATE `script_texts` SET `content_loc8` = 'Я буду служить господину... даже после... смерти!' WHERE `entry` = -1533081;
 UPDATE `script_texts` SET `content_loc8` = 'Теперь вы принадлежите мне!' WHERE `entry` = -1533109;
 UPDATE `script_texts` SET `content_loc8` = 'Я вижу вас!' WHERE `entry` = -1533110;
 UPDATE `script_texts` SET `content_loc8` = 'Пришло ваше время!' WHERE `entry` = -1533111;
@@ -116,22 +191,9 @@ UPDATE `script_texts` SET `content_loc8` = 'Скоро... мир содрогн�
 UPDATE `script_texts` SET `content_loc8` = 'Вам конец.' WHERE `entry` = -1533116;
 UPDATE `script_texts` SET `content_loc8` = 'Голодные черви будут пировать в ваших гниющих трупах!' WHERE `entry` = -1533117;
 UPDATE `script_texts` SET `content_loc8` = 'Неет!' WHERE `entry` = -1533118;
-UPDATE `script_texts` SET `content_loc8` = 'Слава господину!' WHERE `entry` = -1533075;
-UPDATE `script_texts` SET `content_loc8` = 'Прощайся с жизнью!' WHERE `entry` = -1533076;
-UPDATE `script_texts` SET `content_loc8` = 'Смерть, чужакам!' WHERE `entry` = -1533077;
-UPDATE `script_texts` SET `content_loc8` = 'Встаньте, мои войны! Встаньте и сражайтесь вновь!' WHERE `entry` = -1533078;
-UPDATE `script_texts` SET `content_loc8` = 'Дело сделано!' WHERE `entry` = -1533079;
-UPDATE `script_texts` SET `content_loc8` = 'Этот вздох был для тебя последним!' WHERE `entry` = -1533080;
-UPDATE `script_texts` SET `content_loc8` = 'Я буду служить господину... даже после... смерти!' WHERE `entry` = -1533081;
-UPDATE `script_texts` SET `content_loc8` = 'Шшш... скоро все будет кончено.' WHERE `entry` = -1533008;
-UPDATE `script_texts` SET `content_loc8` = 'Подойдите ближе... лакомые кусочки. Я слишком долго мечтал о еде и крови.' WHERE `entry` = -1533007;
-UPDATE `script_texts` SET `content_loc8` = 'Кого мне съесть первым ? Сложный выбор... все они пахнут так вкусно.' WHERE `entry` = -1533006;
-UPDATE `script_texts` SET `content_loc8` = 'Куда идти ? Что делать ? Выбирайте, но все пути ведут к боли, и смерти.' WHERE `entry` = -1533005;
-UPDATE `script_texts` SET `content_loc8` = 'Я слышу биение маленьких сердец. Да... теперь они бьются быстрей. Но скоро они остановятся.' WHERE `entry` = -1533004;
-UPDATE `script_texts` SET `content_loc8` = 'Бегите, бегите! Я люблю горячую кровь!' WHERE `entry` = -1533003;
-UPDATE `script_texts` SET `content_loc8` = 'Вам отсюда не выбраться.' WHERE `entry` = -1533002;
-UPDATE `script_texts` SET `content_loc8` = 'Ооо... добро пожаловать в мою гостиную.' WHERE `entry` = -1533000;
-UPDATE `script_texts` SET `content_loc8` = 'Посмотрим какие вы на вкус...' WHERE `entry` = -1533001;
+UPDATE `script_texts` SET `content_loc8` = 'Что? Этого не может быть!' WHERE `entry` = -1595091;
+UPDATE `script_texts` SET `content_loc8` = 'Прочь, подлецы! Альтеракская долина достанется Альянсу!' WHERE `entry` = -1810023;
+UPDATE `script_texts` SET `content_loc8` = 'Эй вы, жалкие трусы из Северного Волка! Хотите драться – так идите ко мне!' WHERE `entry` = -1810024;
 UPDATE `script_texts` SET `content_loc8` = 'Артас! Ты не можешь так просто...' WHERE `entry` = -1595082;
 UPDATE `script_texts` SET `content_loc8` = 'Прости, Артас. Я не могу на это смотреть.' WHERE `entry` = -1595086;
 UPDATE `script_texts` SET `content_loc8` = 'Я рад, что ты пришел, Утер!' WHERE `entry` = -1595070;
