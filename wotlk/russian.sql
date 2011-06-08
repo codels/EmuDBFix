@@ -113,6 +113,34 @@ UPDATE `trinity_string` SET `content_loc8` = 'Вы установил скоро
 UPDATE `trinity_string` SET `content_loc8` = '%s установил вашу скорость передвижения назад на  %2.2f от нормальной.' WHERE `entry` = 144;
 UPDATE `trinity_string` SET `content_loc8` = 'Вы установили скорость полета на %2.2f от нормальной у %s.' WHERE `entry` = 145;
 UPDATE `trinity_string` SET `content_loc8` = '%s установил вашу скорость полета на %2.2f от нормальной.' WHERE `entry` = 146;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы установили размер на %2.2f у %s.' WHERE `entry` = 147;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил ваш размер на %2.2f.' WHERE `entry` = 148;
+UPDATE `trinity_string` SET `content_loc8` = 'Такое ездовое животное отсутствует.' WHERE `entry` = 149;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы отдали свое средство передвижения %s.' WHERE `entry` = 150;
+UPDATE `trinity_string` SET `content_loc8` = '%s отдал вам свое средство передвижения.' WHERE `entry` = 151;
+UPDATE `trinity_string` SET `content_loc8` = 'ПОЛЬЗОВАТЕЛЬ1: %i, ДОБАВИТЬ: %i, РАЗНИЦА: %i' WHERE `entry` = 152;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы взяли всю медь у %s.' WHERE `entry` = 153;
+UPDATE `trinity_string` SET `content_loc8` = '%s взял всю Вашу медь.' WHERE `entry` = 154;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы взяли %i меди у %s.' WHERE `entry` = 155;
+UPDATE `trinity_string` SET `content_loc8` = '%s взял %i меди у Вас.' WHERE `entry` = 156;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы дали %i меди %s.' WHERE `entry` = 157;
+UPDATE `trinity_string` SET `content_loc8` = '%s дал Вам %i меди.' WHERE `entry` = 158;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы слышите звук %u.' WHERE `entry` = 159;
+UPDATE `trinity_string` SET `content_loc8` = 'ПОЛЬЗОВАТЕЛЬ2: %i, ДОБАВИТЬ: %i, РЕЗУЛЬТАТ: %i' WHERE `entry` = 160;
+UPDATE `trinity_string` SET `content_loc8` = 'Удален бит %i в поле %i.' WHERE `entry` = 161;
+UPDATE `trinity_string` SET `content_loc8` = 'Установлен бит %i в поле %i.' WHERE `entry` = 162;
+UPDATE `trinity_string` SET `content_loc8` = 'Таблица локаций для телепортации пуста.' WHERE `entry` = 163;
+UPDATE `trinity_string` SET `content_loc8` = 'Локация для телепортации не найдена!' WHERE `entry` = 164;
+UPDATE `trinity_string` SET `content_loc8` = 'Требуется параметр поиска.' WHERE `entry` = 165;
+UPDATE `trinity_string` SET `content_loc8` = 'Нет подходящих Вашему запросу локаций для телепортации.' WHERE `entry` = 166;
+-- 167 (Не используется ядром)
+UPDATE `trinity_string` SET `content_loc8` = 'Найденные локации:\r\n%s' WHERE `entry` = 168;
+UPDATE `trinity_string` SET `content_loc8` = 'Письмо отправлено к %s' WHERE `entry` = 169;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы пытаетесь прослушать звук %u но такого не существует.' WHERE `entry` = 170;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете телепортироваться к себе!' WHERE `entry` = 171;
+UPDATE `trinity_string` SET `content_loc8` = 'команда консоли сервера' WHERE `entry` = 172;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы изменили запас рунической силы %s до %i/%i.' WHERE `entry` = 173;
+UPDATE `trinity_string` SET `content_loc8` = '%s установил запас вашей рунической силы до %i/%i.' WHERE `entry` = 174;
 -- 147 - 601
 UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
 -- 603 - 606
