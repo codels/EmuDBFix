@@ -141,7 +141,35 @@ UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете телеп�
 UPDATE `trinity_string` SET `content_loc8` = 'команда консоли сервера' WHERE `entry` = 172;
 UPDATE `trinity_string` SET `content_loc8` = 'Вы изменили запас рунической силы %s до %i/%i.' WHERE `entry` = 173;
 UPDATE `trinity_string` SET `content_loc8` = '%s установил запас вашей рунической силы до %i/%i.' WHERE `entry` = 174;
--- 175 - 601
+-- 176 - 199(Не используется ядром)
+UPDATE `trinity_string` SET `content_loc8` = 'Нет выбора.' WHERE `entry` = 200;
+UPDATE `trinity_string` SET `content_loc8` = 'GUID объекта: младшие биты %u старшие биты %X' WHERE `entry` = 201;
+UPDATE `trinity_string` SET `content_loc8` = 'Слишком длинное имя из %i знаков.' WHERE `entry` = 202;
+UPDATE `trinity_string` SET `content_loc8` = 'Ошибка, имя может содержать только буквы латинского алфавита (A-Z и a-z).' WHERE `entry` = 203;
+UPDATE `trinity_string` SET `content_loc8` = 'Слишком длинное подимя из %i знаков.' WHERE `entry` = 204;
+UPDATE `trinity_string` SET `content_loc8` = 'Пока не реализовано' WHERE `entry` = 205;
+UPDATE `trinity_string` SET `content_loc8` = 'Предмет \'%i\' \'%s\' добавлен в список с макс. количеством \'%i\' и временем восстановления \'%i\' и расширенной стоимостью \'%i\'' WHERE `entry` = 206;
+UPDATE `trinity_string` SET `content_loc8` = 'Предмет \'%i\' не найден в базе данных.' WHERE `entry` = 207;
+UPDATE `trinity_string` SET `content_loc8` = 'Предмет \'%i\' \'%s\' удален из списка торговца' WHERE `entry` = 208;
+UPDATE `trinity_string` SET `content_loc8` = 'Предмет \'%i\' не найден в списке торговца.' WHERE `entry` = 209;
+UPDATE `trinity_string` SET `content_loc8` = 'Предмет \'%i\' (с расширенной стоимостью %u) уже в списке торговца.' WHERE `entry` = 210;
+UPDATE `trinity_string` SET `content_loc8` = 'Сброс заклинаний у %s.' WHERE `entry` = 211;
+UPDATE `trinity_string` SET `content_loc8` = 'Сброс заклинаний у %s при следующем входе в мир.' WHERE `entry` = 212;
+UPDATE `trinity_string` SET `content_loc8` = 'Сброс талантов у %s.' WHERE `entry` = 213;
+UPDATE `trinity_string` SET `content_loc8` = 'Сброс талантов у %s при следующем входе в мир.' WHERE `entry` = 214;
+UPDATE `trinity_string` SET `content_loc8` = 'Ваши заклинания были сброшены.' WHERE `entry` = 215;
+UPDATE `trinity_string` SET `content_loc8` = 'Ваши таланты были сброшены.' WHERE `entry` = 216;
+UPDATE `trinity_string` SET `content_loc8` = 'Неизвестное значение \'%s\' для команды .reset all Напечатайте полное правильное имя.' WHERE `entry` = 217;
+UPDATE `trinity_string` SET `content_loc8` = 'Сброс заклинаний для всех игроков при входе в игру. Настоятельно рекомендуем перезайти!' WHERE `entry` = 218;
+UPDATE `trinity_string` SET `content_loc8` = 'Сброс талантов для всех игроков при входе в игру. Настоятельно рекомендуем перезайти!' WHERE `entry` = 219;
+UPDATE `trinity_string` SET `content_loc8` = 'Существо (GUID: %u) Не найдено точек пути.' WHERE `entry` = 220;
+UPDATE `trinity_string` SET `content_loc8` = 'Существо (GUID: %u) Последняя точка пути не найдена.' WHERE `entry` = 221;
+UPDATE `trinity_string` SET `content_loc8` = 'Существо (GUID: %u) Не найдено точек пути - использовано \'wpguid\'. Поиск по его позиции...' WHERE `entry` = 222;
+UPDATE `trinity_string` SET `content_loc8` = 'Существо (GUID: %u) Не найдено точек пути - Это проблема базы MaNGOS (одиночный float).' WHERE `entry` = 223;
+UPDATE `trinity_string` SET `content_loc8` = 'Выбранное существо проигнорировано -  использован предоставленный GUID' WHERE `entry` = 224;
+UPDATE `trinity_string` SET `content_loc8` = 'Существо (GUID: %u) не найдено' WHERE `entry` = 225;
+UPDATE `trinity_string` SET `content_loc8` = 'Вы должны выбрать визуальную точку пути.' WHERE `entry` = 226;
+-- 227 - 601
 UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
 -- 603 - 606
 UPDATE `trinity_string` SET `content_loc8` = '$n роняет флаг Орды!' WHERE `entry` = 607;
