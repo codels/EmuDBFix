@@ -4,7 +4,7 @@ Start project GUID:
 
 Used:
 <SOURCE>
-        <GUID>[ - GUID] : <ID>
+        <GUID>[ - GUID] : <ID> // Comment
 
 Gameobject:
         200000 : 192060
@@ -15,6 +15,7 @@ Creature:
         300010 : 37223
         300011 : 38112
         300012 : 38113
+	300013 : 30099 // Njormeld
 
 Uninstall:
         DELETE FROM `gameobject` WHERE `guid` >= 200000;
