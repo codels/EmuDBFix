@@ -17,6 +17,26 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@NPC, 0, 1, 0, 6, 0, 100, 1, 0, 0, 0, 0, 11, 71203, 3, 0, 0, 0, 0, 18, 45, 0, 0, 0, 0, 0, 0, 'Servant of the Throne - Cast Soul Feast on death');
 
 /*#####################################
+####    Nerub'ar Broodkeeper
+#####################################*/
+
+SET @NPC = 36725;
+
+UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = @NPC;
+
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`,
+`event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
+`action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
+`target_z`, `target_o`, `comment`) VALUES
+(@NPC, 0, 0, 0, 6, 0, 100, 0, 0, 0, 0, 0, 11, 71203, 3, 0, 0, 0, 0, 18, 45, 0, 0, 0, 0, 0, 0, 'Nerub\'ar Broodkeeper - Cast Soul Feast on death'),
+(@NPC, 0, 1, 0, 14, 0, 100, 0, 50000, 39, 7500, 10000, 11, 71020, 1, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'Nerub\'ar Broodkeeper - Cast Dark Mending'),
+(@NPC, 0, 2, 0, 0, 0, 100, 0, 5500, 7000, 10000, 15000, 11, 70980, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Nerub\'ar Broodkeeper - Cast Web Wrap'),
+(@NPC, 0, 3, 0, 0, 0, 100, 0, 100, 1000, 2100, 2300, 11, 70965, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Nerub\'ar Broodkeeper - Cast Crypt Scarabs');
+
+/*#####################################
 ####     Deathbound Ward
 #####################################*/
 
