@@ -141,7 +141,7 @@ UPDATE `trinity_string` SET `content_loc8` = 'Вы не можете телеп�
 UPDATE `trinity_string` SET `content_loc8` = 'команда консоли сервера' WHERE `entry` = 172;
 UPDATE `trinity_string` SET `content_loc8` = 'Вы изменили запас рунической силы %s до %i/%i.' WHERE `entry` = 173;
 UPDATE `trinity_string` SET `content_loc8` = '%s установил запас вашей рунической силы до %i/%i.' WHERE `entry` = 174;
--- 147 - 601
+-- 175 - 601
 UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
 -- 603 - 606
 UPDATE `trinity_string` SET `content_loc8` = '$n роняет флаг Орды!' WHERE `entry` = 607;

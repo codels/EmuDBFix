@@ -8,6 +8,10 @@ Used:
 
 Gameobject:
         200000 : 192060
+	200001 : 181575 // Naxxramas Portal
+	200002 : 181576 // Naxxramas Portal
+	200003 : 181577 // Naxxramas Portal
+	200004 : 181578 // Naxxramas Portal
 
 Creature:
         300000 - 300008 : 39420
@@ -15,7 +19,7 @@ Creature:
         300010 : 37223
         300011 : 38112
         300012 : 38113
-	300013 : 30099 // Njormeld
+        300013 : 30099 // Njormeld
 
 Uninstall:
         DELETE FROM `gameobject` WHERE `guid` >= 200000;
