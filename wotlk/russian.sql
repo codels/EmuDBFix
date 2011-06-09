@@ -169,7 +169,15 @@ UPDATE `trinity_string` SET `content_loc8` = 'Существо (GUID: %u) Не �
 UPDATE `trinity_string` SET `content_loc8` = 'Выбранное существо проигнорировано -  использован предоставленный GUID' WHERE `entry` = 224;
 UPDATE `trinity_string` SET `content_loc8` = 'Существо (GUID: %u) не найдено' WHERE `entry` = 225;
 UPDATE `trinity_string` SET `content_loc8` = 'Вы должны выбрать визуальную точку пути.' WHERE `entry` = 226;
--- 227 - 601
+UPDATE `trinity_string` SET `content_loc8` = 'Не найдено точек пути' WHERE `entry` = 227;
+UPDATE `trinity_string` SET `content_loc8` = 'Невозможно создать визуальную точку пути с ID существа: %d' WHERE `entry` = 228;
+UPDATE `trinity_string` SET `content_loc8` = 'Все визуальные точки пути убраны' WHERE `entry` = 229;
+UPDATE `trinity_string` SET `content_loc8` = 'Невозможно создать точку пути - существо с ID: %d' WHERE `entry` = 230;
+UPDATE `trinity_string` SET `content_loc8` = 'GUID не предоставлен.' WHERE `entry` = 231;
+UPDATE `trinity_string` SET `content_loc8` = 'Не предоставлен номер точки пути.' WHERE `entry` = 232;
+UPDATE `trinity_string` SET `content_loc8` = 'Требуется аргумент для \'%s\'.' WHERE `entry` = 233;
+UPDATE `trinity_string` SET `content_loc8` = 'Точка пути %i добавлена к GUID: %d' WHERE `entry` = 234;
+-- 235 - 601
 UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется через минуту!' WHERE `entry` IN (602, 636, 661, 1206, 1326, 10057);
 -- 603 - 606
 UPDATE `trinity_string` SET `content_loc8` = '$n роняет флаг Орды!' WHERE `entry` = 607;
