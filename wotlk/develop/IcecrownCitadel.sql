@@ -114,6 +114,24 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@NPC, 0, 2, 0, 0, 0, 100, 20, 3500, 5000, 6500, 7000, 11, 71106, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Deathspeaker Attendant - Cast Shadow Nova (25)');
 
 /*#####################################
+####     Deathspeaker High Priest
+#####################################*/
+
+SET @NPC = 36829;
+
+UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = @NPC;
+
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`,
+`event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
+`action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
+`target_z`, `target_o`, `comment`) VALUES
+(@NPC, 0, 0, 0, 25, 0, 100, 0, 0, 0, 0, 0, 75, 69491, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Deathspeaker High Priest - Add Aura of Darkness'),
+(@NPC, 0, 1, 0, 0, 0, 100, 0, 1500, 3000, 8500, 11000, 11, 69483, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Deathspeaker High Priest - Cast Dark Reckoning');
+
+/*#####################################
 ####     Deathbound Ward
 #####################################*/
 
