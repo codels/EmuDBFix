@@ -8,10 +8,10 @@ Used:
 
 Gameobject:
         200000 : 192060
-	200001 : 181575 // Naxxramas Portal
-	200002 : 181576 // Naxxramas Portal
-	200003 : 181577 // Naxxramas Portal
-	200004 : 181578 // Naxxramas Portal
+        200001 : 181575 // Naxxramas Portal
+        200002 : 181576 // Naxxramas Portal
+        200003 : 181577 // Naxxramas Portal
+        200004 : 181578 // Naxxramas Portal
 
 Creature:
         300000 - 300008 : 39420
