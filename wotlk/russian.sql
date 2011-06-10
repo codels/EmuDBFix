@@ -191,7 +191,7 @@ UPDATE `trinity_string` SET `content_loc8` = 'Битва начнется чер
 ###     `locales_gossip_menu_option`
 ########################################*/
 
-DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` IN (4461, 6647, 9741, 10371, 11211);
+DELETE FROM `locales_gossip_menu_option` WHERE `menu_id` IN (4461, 6647, 9741, 10343, 10371, 11211);
 INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc8`, `box_text_loc8`) VALUES
 (4461, 0, 'Да. Так.', NULL),
 (6647, 0, 'Я хочу узнать больше об учении Света.', NULL),
@@ -201,6 +201,8 @@ INSERT INTO `locales_gossip_menu_option` (`menu_id`, `id`, `option_text_loc8`, `
 (9741, 1, 'Мне нужно найти Дажика, у тебя есть его мел?', NULL),
 (9741, 2, 'Мне нужно найти Горегека, у тебя есть его кандалы?', NULL),
 (9741, 3, 'Мне нужно найти Зепика, у тебя есть его охотничий рог?', NULL),
+(10343, 1, 'Я готов драться!', NULL),
+(10343, 2, 'Я готов драться!', NULL),
 (10371, 0, 'Купить двойную специализацию талантов.', 'Вы уверены что хотите купить двойную специализацию талантов?'),
 (11211, 0, 'Забраться в ветролет.', NULL);
 
