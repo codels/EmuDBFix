@@ -242,12 +242,22 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@NPC, 0, 2, 0, 0, 0, 100, 0, 15000, 20000, 15000, 20000, 11, 69871, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Plague Scientist - Cast Plague Stream');
 
 /*#####################################
-####       Plague Scientist
+####           Stinky
 #####################################*/
 
 SET @NPC = 37025;
 
-UPDATE `creature_template` SET `AIName` = '', `ScriptName` = 'npc_stinky_icc' WHERE `entry` = 37025;
+UPDATE `creature_template` SET `AIName` = '', `ScriptName` = 'npc_stinky_icc' WHERE `entry` = @NPC;
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+
+/*#####################################
+####           Precious
+#####################################*/
+
+SET @NPC = 37217;
+
+UPDATE `creature_template` SET `AIName` = '', `ScriptName` = 'npc_precious_icc' WHERE `entry` = @NPC;
 DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
 
