@@ -315,6 +315,31 @@ DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
 
 /*#####################################
+####       Darkfallen Archmage
+#####################################*/
+
+SET @NPC = 37664;
+
+UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = @NPC;
+
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`,
+`event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
+`action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
+`target_z`, `target_o`, `comment`) VALUES
+(@NPC, 0, 0, 0, 0, 0, 100, 10, 3500, 5000, 7500, 10000, 11, 70407, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Blast Wave (10)'),
+(@NPC, 0, 1, 0, 0, 0, 100, 20, 3500, 5000, 7500, 10000, 11, 71151, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Blast Wave (25)'),
+(@NPC, 0, 2, 0, 0, 0, 100, 10, 100, 400, 3100, 3300, 11, 70409, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Fireball (10)'),
+(@NPC, 0, 3, 0, 0, 0, 100, 20, 100, 400, 3100, 3300, 11, 71153, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Fireball (25)'),
+(@NPC, 0, 4, 0, 0, 0, 100, 0, 5000, 7000, 11000, 14000, 11, 70410, 1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Polymorph: Spider'),
+(@NPC, 0, 5, 0, 4, 0, 100, 10, 0, 0, 0, 0, 11, 70408, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic  on Aggro (10)'),
+(@NPC, 0, 6, 0, 4, 0, 100, 20, 0, 0, 0, 0, 11, 72336, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic  on Aggro (20)'),
+(@NPC, 0, 7, 0, 15, 0, 100, 10, 40, 7500, 10000, 0, 11, 70408, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic (10)'),
+(@NPC, 0, 8, 0, 15, 0, 100, 20, 40, 7500, 10000, 0, 11, 72336, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic (20)');
+
+/*#####################################
 ####     Lord Marrowgar
 #####################################*/
 
