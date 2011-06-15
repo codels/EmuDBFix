@@ -315,6 +315,26 @@ DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
 DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
 
 /*#####################################
+####       Darkfallen Advisor
+#####################################*/
+
+SET @NPC = 37571;
+
+UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = @NPC;
+
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`,
+`event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
+`action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
+`target_z`, `target_o`, `comment`) VALUES
+(@NPC, 0, 0, 0, 0, 0, 100, 10, 500, 1000, 1100, 1200, 11, 72057, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Lich Slap (10)'),
+(@NPC, 0, 1, 0, 0, 0, 100, 20, 500, 1000, 1100, 1200, 11, 72421, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Lich Slap (25)'),
+(@NPC, 0, 2, 0, 0, 0, 100, 0, 15000, 15000, 45000, 45000, 11, 72065, 1, 0, 0, 0, 0, 11, 0, 30, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Shroud of Protection'),
+(@NPC, 0, 3, 0, 0, 0, 100, 0, 30000, 30000, 45000, 45000, 11, 72066, 1, 0, 0, 0, 0, 11, 0, 30, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Shroud of Spell Warding');
+
+/*#####################################
 ####    Darkfallen Blood Knight
 #####################################*/
 
