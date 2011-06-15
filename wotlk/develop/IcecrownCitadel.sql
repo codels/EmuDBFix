@@ -305,6 +305,16 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (@NPC, 0, 1, 0, 0, 0, 100, 20, 2500, 4000, 2500, 4000, 11, 71942, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Val\'kyr Herald - Cast Severed Essence (25 / 25H)');
 
 /*#####################################
+####           Ymirjar Huntress
+#####################################*/
+
+SET @NPC = 37134;
+
+UPDATE `creature_template` SET `AIName` = '', `ScriptName` = 'npc_frostwing_vrykul' WHERE `entry` = @NPC;
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+
+/*#####################################
 ####           Precious
 #####################################*/
 
