@@ -301,8 +301,8 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
 `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
 `target_z`, `target_o`, `comment`) VALUES
-(@NPC, 0, 0, 0, 0, 0, 100, 10, 2500, 4000, 2500, 4000, 11, 71906, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Val\'kyr Herald - Cast Severed Essence (10)'),
-(@NPC, 0, 1, 0, 0, 0, 100, 20, 2500, 4000, 2500, 4000, 11, 71942, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Val\'kyr Herald - Cast Severed Essence (25)');
+(@NPC, 0, 0, 0, 0, 0, 100, 10, 2500, 4000, 2500, 4000, 11, 71906, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Val\'kyr Herald - Cast Severed Essence (10 / 10H)'),
+(@NPC, 0, 1, 0, 0, 0, 100, 20, 2500, 4000, 2500, 4000, 11, 71942, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Val\'kyr Herald - Cast Severed Essence (25 / 25H)');
 
 /*#####################################
 ####           Precious
@@ -329,8 +329,8 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
 `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
 `target_z`, `target_o`, `comment`) VALUES
-(@NPC, 0, 0, 0, 0, 0, 100, 10, 500, 1000, 1100, 1200, 11, 72057, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Lich Slap (10)'),
-(@NPC, 0, 1, 0, 0, 0, 100, 20, 500, 1000, 1100, 1200, 11, 72421, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Lich Slap (25)'),
+(@NPC, 0, 0, 0, 0, 0, 100, 10, 500, 1000, 1100, 1200, 11, 72057, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Lich Slap (10 / 10H)'),
+(@NPC, 0, 1, 0, 0, 0, 100, 20, 500, 1000, 1100, 1200, 11, 72421, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Lich Slap (25 / 25H)'),
 (@NPC, 0, 2, 0, 0, 0, 100, 0, 15000, 15000, 45000, 45000, 11, 72065, 1, 0, 0, 0, 0, 11, 0, 30, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Shroud of Protection'),
 (@NPC, 0, 3, 0, 0, 0, 100, 0, 30000, 30000, 45000, 45000, 11, 72066, 1, 0, 0, 0, 0, 11, 0, 30, 0, 0, 0, 0, 0, 'Darkfallen Advisor - Cast Shroud of Spell Warding');
 
@@ -371,8 +371,8 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
 `target_z`, `target_o`, `comment`) VALUES
 (@NPC, 0, 0, 0, 0, 0, 100, 0, 1000, 2000, 30000, 31000, 11, 70750, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Commander - Cast Battle Shout'),
-(@NPC, 0, 1, 0, 9, 0, 100, 10, 10, 30, 3000, 4000, 11, 70449, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Commander - Cast Vampire Rush (10)'),
-(@NPC, 0, 2, 0, 9, 0, 100, 20, 10, 30, 3000, 4000, 11, 71155, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Commander - Cast Vampire Rush (25)');
+(@NPC, 0, 1, 0, 9, 0, 100, 10, 10, 30, 3000, 4000, 11, 70449, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Commander - Cast Vampire Rush (10 / 10H)'),
+(@NPC, 0, 2, 0, 9, 0, 100, 20, 10, 30, 3000, 4000, 11, 71155, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Commander - Cast Vampire Rush (25 / 25H)');
 
 /*#####################################
 ####        Darkfallen Noble
@@ -391,8 +391,8 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 `target_z`, `target_o`, `comment`) VALUES
 (@NPC, 0, 0, 0, 0, 0, 100, 0, 6000, 7000, 30000, 40000, 11, 70299, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Noble - Cast Siphon Essence'),
 (@NPC, 0, 1, 0, 0, 0, 100, 0, 3500, 5000, 9000, 11000, 11, 70645, 1, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Noble - Cast Chains of Shadow'),
-(@NPC, 0, 2, 0, 0, 0, 100, 10, 500, 1500, 2100, 2200, 11, 72960, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Noble - Cast Shadow Bolt (10)'),
-(@NPC, 0, 3, 0, 0, 0, 100, 20, 500, 1500, 2100, 2200, 11, 72961, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Noble - Cast Shadow Bolt (25)');
+(@NPC, 0, 2, 0, 0, 0, 100, 10, 500, 1500, 2100, 2200, 11, 72960, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Noble - Cast Shadow Bolt (10 / 10H)'),
+(@NPC, 0, 3, 0, 0, 0, 100, 20, 500, 1500, 2100, 2200, 11, 72961, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Noble - Cast Shadow Bolt (25 / 25H)');
 
 /*#####################################
 ####       Darkfallen Archmage
@@ -409,15 +409,34 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
 `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
 `target_z`, `target_o`, `comment`) VALUES
-(@NPC, 0, 0, 0, 0, 0, 100, 10, 3500, 5000, 7500, 10000, 11, 70407, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Blast Wave (10)'),
-(@NPC, 0, 1, 0, 0, 0, 100, 20, 3500, 5000, 7500, 10000, 11, 71151, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Blast Wave (25)'),
-(@NPC, 0, 2, 0, 0, 0, 100, 10, 100, 400, 3100, 3300, 11, 70409, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Fireball (10)'),
-(@NPC, 0, 3, 0, 0, 0, 100, 20, 100, 400, 3100, 3300, 11, 71153, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Fireball (25)'),
+(@NPC, 0, 0, 0, 0, 0, 100, 10, 3500, 5000, 7500, 10000, 11, 70407, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Blast Wave (10 / 10H)'),
+(@NPC, 0, 1, 0, 0, 0, 100, 20, 3500, 5000, 7500, 10000, 11, 71151, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Blast Wave (25 / 25H)'),
+(@NPC, 0, 2, 0, 0, 0, 100, 10, 100, 400, 3100, 3300, 11, 70409, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Fireball (10 / 10H)'),
+(@NPC, 0, 3, 0, 0, 0, 100, 20, 100, 400, 3100, 3300, 11, 71153, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Fireball (25 / 25H)'),
 (@NPC, 0, 4, 0, 0, 0, 100, 0, 5000, 7000, 11000, 14000, 11, 70410, 1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Polymorph: Spider'),
-(@NPC, 0, 5, 0, 4, 0, 100, 10, 0, 0, 0, 0, 11, 70408, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic  on Aggro (10)'),
-(@NPC, 0, 6, 0, 4, 0, 100, 20, 0, 0, 0, 0, 11, 72336, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic  on Aggro (20)'),
-(@NPC, 0, 7, 0, 15, 0, 100, 10, 40, 7500, 10000, 0, 11, 70408, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic (10)'),
-(@NPC, 0, 8, 0, 15, 0, 100, 20, 40, 7500, 10000, 0, 11, 72336, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic (20)');
+(@NPC, 0, 5, 0, 4, 0, 100, 10, 0, 0, 0, 0, 11, 70408, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic  on Aggro (10 / 10H)'),
+(@NPC, 0, 6, 0, 4, 0, 100, 20, 0, 0, 0, 0, 11, 72336, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic  on Aggro (25 / 25H)'),
+(@NPC, 0, 7, 0, 15, 0, 100, 10, 40, 7500, 10000, 0, 11, 70408, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic (10 / 10H)'),
+(@NPC, 0, 8, 0, 15, 0, 100, 20, 40, 7500, 10000, 0, 11, 72336, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Archmage - Cast Amplify Magic (25 / 25H)');
+
+/*#####################################
+####     Darkfallen Lieutenant
+#####################################*/
+
+SET @NPC = 37665;
+
+UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = @NPC;
+
+DELETE FROM `creature_ai_scripts` WHERE `creature_id` = @NPC;
+
+DELETE FROM `smart_scripts` WHERE `entryorguid` = @NPC AND `source_type` = 0;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`,
+`event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`,
+`action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`,
+`target_z`, `target_o`, `comment`) VALUES
+(@NPC, 0, 0, 0, 0, 0, 100, 0, 5000, 10000, 15000, 20000, 11, 70423, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Lieutenant - Cast Vampiric Curse'),
+(@NPC, 0, 1, 0, 9, 0, 100, 10, 0, 10, 2500, 5000, 11, 70435, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Lieutenant - Cast Rend Flesh (10 / 10H)'),
+(@NPC, 0, 2, 0, 9, 0, 100, 20, 0, 10, 2500, 5000, 11, 71154, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 'Darkfallen Lieutenant - Cast Rend Flesh (25 / 25H)');
 
 /*#####################################
 ####     Lord Marrowgar
