@@ -1,0 +1,1 @@
+UPDATE `quest_template` SET `QuestFlags` = 8, `ReqCreatureOrGOId2` = 0, `ReqCreatureOrGOCount2` = 0, `ReqSpellCast1` = 0, `ReqSpellCast2` = 0 WHERE `entry` = 5624;
